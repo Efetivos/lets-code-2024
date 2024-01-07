@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'Ppformula';
+    src: url('@/assets/fonts/ppformula-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Ppformula';
+    src: url('@/assets/fonts/ppformula-extrabold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Ocraext';
+    src: url('@/assets/fonts/ocraext.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'A2g';
+    src: url('@/assets/fonts/a2g.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
