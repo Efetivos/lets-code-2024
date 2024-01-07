@@ -12,12 +12,10 @@
 					</svg>
 				</div>
 				<div class="header__nav-cta">
-					<ul role="list" class="header__nav w-list-unstyled">
-						<li class="header__nav__li">
-							<a href="#" class="header__nav__link">Discord</a>
-						</li>
-						<li class="header__nav__li">
-							<a href="#" class="header__nav__link">Discord</a>
+					<ul role="list" class="header__nav">
+
+						<li v-for="nav_item in postData.header_navigation" :key="nav_item"  class="header__nav__li">
+							<a :href="nav_item.url" :target="nav_item.external_link ? '_blank' : null " class="nav_item inline-block"> {{ nav_item.label }}</a>
 						</li>
 					</ul>
 					<button class="header__trg-menu">
@@ -28,20 +26,16 @@
 							</svg>
 						</div>
 					</button>
-					<button class="header__cta">
-						<div class="header__cta___span">Get Started</div>
-					</button>
+					<a :href="postData.header_cta_url" target="_blank" class="header__cta"> {{ postData.header_cta_label }}</a>
 				</div>
 			</div>
 		</header>
 
 </template>
 
-
 <script>
     export default {
-        mounted() {
-        }
+        props: ['postData']
     }
 </script>
 

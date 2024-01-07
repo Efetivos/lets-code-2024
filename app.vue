@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<MenuFixed/>
+		<MenuFixed :postData="data"/>
 		<MenuFS/>
 		<NuxtLayout>
 			<NuxtPage />
@@ -10,6 +10,10 @@
 		<Preloader/> -->
 	</div>
 </template>
+<script setup>
+	const { client } = usePrismic()
+	const  { data } = await client.getSingle("global")
+</script>
 <script>
 	import { transitions } from "assets/js/utils_global/transitions";
 	import { Console } from "assets/js/utils_global/console";

@@ -1,24 +1,27 @@
 <template>
 
     <div class="project">
-        <div class="project__subtitle">WOOM. INTERACTION</div>
+        <a :href="postData.url" target="_blank" class="project__subtitle"> {{ postData.title }}</a>
         <div class="project__holder">
             <div class="project__display">
-                <img src="https://raw.githubusercontent.com/Efetivos/gallery/master/houses/house1.jpg" loading="lazy" alt="" class="project__display__img">
-                <div class="project__video"></div>
+                <img :src="postData.img.url" loading="lazy" alt="" class="project__display__img">
+                
+                <div class="project__video">
+                    <video :src="postData.video.url" loading="lazy" autoplay muted loop playsinline class="project__video__video"></video>
+                </div>
             </div>
             <div class="project__info">
                 <div class="project__info__ctn">
-                    <h1 class="project__info__h1">WOOM. Interaction</h1>
+                    <h1 class="project__info__h1">{{ postData.title }}</h1>
                     <div class="project__info__texts">
-                        <p class="project__info__p">Established with a vision to provide artists with an immersive and creative environment, we offer top-tier recording equipment, acoustically treated rooms</p>
-                        <p class="project__info__p">Established with a vision to provide artists with an immersive and creative environment, we offer top-tier recording equipment, acoustically treated rooms</p>
+                        <p class="project__info__p">{{ postData.description_1 }}</p>
+                        <p class="project__info__p">{{ postData.description_2 }}</p>
                     </div>
                 </div>
                 <div class="project__info__links-ctn">
-                    <button class="project__cta">
-                        <div class="project__cta__span">Get Started</div>
-                    </button>
+                    <a :href="postData.url" target="_blank"  class="project__cta">
+                        <div class="project__cta__span">{{ postData.label_button }}</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -28,9 +31,6 @@
 <script>
     export default {
         props: ['postData'],
-        mounted() {
-            // console.log(this.postData)
-            //console.log([this.uid, this.type])
-        },
+        mounted() { },
     }
 </script>

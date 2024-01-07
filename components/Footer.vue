@@ -1,22 +1,16 @@
 <template>
 
 	<footer class="footer">
-		<Marquee text="THIS ANOTHER MARQUEE ✺" theme="marquee__footer"/>
+		<Marquee :text="postData.footer_marquee" theme="marquee__footer"/>
 		
 		<div class="footer__hold">
 			<div class="footer__subtitle">
 				<div class="footer__subt">
 					<div class="footer__subt__text">THEREFORE, LET&#x27;S</div>
 				</div>
-				<ul role="list" class="footer__socials w-list-unstyled">
-					<li class="footer__socials__li">
-						<a href="#" class="social inline-block"></a>
-					</li>
-					<li class="footer__socials__li">
-						<a href="#" class="social inline-block"></a>
-					</li>
-					<li class="footer__socials__li">
-						<a href="#" class="social inline-block"></a>
+				<ul role="list" class="footer__socials">
+					<li v-for="social in postData.footer_socials_group" :key="social"  class="footer__socials__li">
+						<a :href="social.url" target="_blank" class="social inline-block"> {{ social.social }}</a>
 					</li>
 				</ul>
 			</div>
@@ -66,5 +60,9 @@
 		</div>
 	</footer>
 </template>
-
+<script>
+    export default {
+        props: ['postData']
+    }
+</script>
 

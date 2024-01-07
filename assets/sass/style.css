@@ -52,11 +52,17 @@ body {
 ul {
 	list-style: none;
 }
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+a {
+	display: block;
+}
+
 .inline-block {
 	display: inline-block;
-}
-.project__video {
-	aspect-ratio: 16/9;
 }
 /* ________________ WEBSITE */
 .hero__eat-fun__svg.w-embed:before, .hero__eat-fun__svg.w-embed:after, .footer__eat-fun__svg.w-embed:before, .footer__eat-fun__svg.w-embed:after  {
@@ -93,11 +99,21 @@ ul {
 }
 
 .header__cta {
-	width: 21rem;
-	height: 4.3rem;
+	align-items: center;
 	background-color: var(--white);
 	border-radius: 1rem;
+	color: var(--black);
+	display: flex;
+	height: 4.3rem;
+	justify-content: center;
 	text-decoration: none;
+	width: 21rem;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid var(--line-soft);
+}
+.header__cta:hover {
+	background-color: var(--color);
+	color: var(--white);
 }
 
 .header__cta___span {
@@ -215,7 +231,7 @@ ul {
 
 .marquee__travel__item {
 	flex: none;
-	margin-right: 6.6rem;
+	margin-right: 2.6rem;
 	font-size: 6rem;
 	line-height: 100%;
 }
@@ -290,6 +306,7 @@ ul {
 	display: flex;
 	position: relative;
 	overflow: hidden;
+	transform: translateZ(0);
 }
 
 .project__display__img {
@@ -311,6 +328,12 @@ ul {
 	background-color: var(--black);
 	border-radius: 1rem;
 	position: relative;
+	aspect-ratio: 16/9;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateZ(0);
 }
 
 .project__info {
@@ -329,6 +352,7 @@ ul {
 	display: flex;
 	position: relative;
 	overflow: hidden;
+	transform: translateZ(0);
 }
 
 .project__info__h1 {
@@ -376,6 +400,9 @@ ul {
 	padding-left: 0;
 	padding-right: 0;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .project__cta__span {
@@ -388,6 +415,7 @@ ul {
 .project__subtitle {
 	margin-bottom: 2rem;
 	font-size: 2.2rem;
+	text-transform: uppercase;
 }
 
 .values {
@@ -498,6 +526,11 @@ ul {
 	font-size: 12.4rem;
 	line-height: 85%;
 	display: inline-block;
+}
+@media only screen and (min-width: 1025px) {
+	h1.code-more__time__h1 {
+		width: 65rem;
+	}
 }
 
 .code-more__big-ctn {
@@ -662,10 +695,14 @@ ul {
 }
 
 .social {
-	width: 6.75rem;
-	height: 6.75rem;
+	border-radius: 1.5rem;
+	padding: 0.7rem 2.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	
 	border: 2px solid var(--line-color);
-	border-radius: 100%;
 }
 
 .header__trg-menu {

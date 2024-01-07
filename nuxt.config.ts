@@ -33,7 +33,7 @@ export default defineNuxtConfig ({
 		'~/assets/sass/app.sass'
 	],
 	prismic: {
-		endpoint: "https://meaghan.cdn.prismic.io/api/v2",
+		endpoint: "https://lets-code.cdn.prismic.io/api/v2",
 		linkResolver: "~/app/prismic/link-resolver.js",
 		preview: false
 	},
@@ -42,7 +42,7 @@ export default defineNuxtConfig ({
 	},
 	modules: [
 		["@nuxtjs/prismic", {
-			"endpoint": "https://meaghan.cdn.prismic.io/api/v2",
+			"endpoint": "https://lets-code.cdn.prismic.io/api/v2",
 		}],
 		['@nuxtjs/google-fonts', {
 			families: {

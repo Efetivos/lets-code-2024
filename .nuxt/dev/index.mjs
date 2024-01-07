@@ -45,7 +45,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "prismic": {
-      "endpoint": "https://meaghan.cdn.prismic.io/api/v2",
+      "endpoint": "https://lets-code.cdn.prismic.io/api/v2",
       "clientConfig": {},
       "client": "~/app/prismic/client",
       "linkResolver": "~/app/prismic/link-resolver.js",

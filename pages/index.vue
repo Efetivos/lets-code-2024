@@ -7,7 +7,7 @@
 		<div class="hero">
 			<div class="hero__hold">
 				<div class="hero__welcome">
-					<div class="hero__welcome__text">WELCOME, AND LET&#x27;S</div>
+					<div class="hero__welcome__text">{{ data.welcome }}</div>
 				</div>
 				<div class="hero__code w-embed">
 					<svg width="100%" viewBox="0 0 1837 301" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,10 +44,10 @@
 				</div>
 				<div class="hero__subtitles">
 					<div class="hero__subtitles__left">
-						<div class="hero__subtitles__span">Welcome to our Community</div>
+						<div class="hero__subtitles__span">{{ data.hero_text_left }}</div>
 					</div>
 					<div class="hero__subtitles__right">
-						<div class="hero__subtitles__span">Welcome to our Community</div>
+						<div class="hero__subtitles__span">{{ data.hero_text_right }}</div>
 					</div>
 				</div>
 			</div>
@@ -56,34 +56,37 @@
 
 		<!--  -------------------- SHOWCASE -------------------- -->
 		<!--  -------------------- SHOWCASE -------------------- -->
-		<section class="showcase">
+		<section id="projects" class="showcase">
 			<div class="showcase__hold">
-				<Marquee text="ONLY A TEXT ✺" theme="showcase__marquee"/>
+				<Marquee :text="data.showcase_marquee" theme="showcase__marquee"/>
 				<div class="showcase__title">
-					<h1 class="showcase__h1">TIME TO CODE</h1>
+					<h1 class="showcase__h1">{{ data.showcase_title }}</h1>
 					<div class="showcase__descr">
-						<p class="showcase__p">Established with a vision to provide artists with an immersive and creative environment, we offer top-tier recording equipment, acoustically treated rooms</p>
+						<p class="showcase__p"> {{ data.description_showcase }}</p>
 					</div>
 				</div>
-				<ul role="list" class="showcase__list w-list-unstyled">
-					<li class="showcase__each">
-						<ProjectCard postData="postData"/>
+				<ul role="list" class="showcase__list">
+					<li v-for="project in data.projects_group" :key="project"  class="showcase__each">
+						<ProjectCard :postData="project"/>
 					</li>
 				</ul>
 			</div>
 		</section>
+		
 
 
-		<Marquee text="THIS ANOTHER MARQUEE ✺" theme="showcase__marquee"/>
+		<Marquee :text="data.values_marquee" theme="showcase__marquee"/>
 
 
 
 		<!--  -------------------- VALUES -------------------- -->
 		<!--  -------------------- VALUES -------------------- -->
 		<section class="values">
-			<ul role="list" class="values__list w-list-unstyled">
-				<li class="values__li">
-					<div class="values__media"></div>
+			<ul role="list" class="values__list">
+				<li v-for="value, index in data.values_group" :key="value" class="values__li">
+					<div class="values__media">
+						<img :src="value.img.url" loading="lazy" alt="" class="values__img">
+					</div>
 					<div class="values__info">
 						<div class="values__info__hold">
 							<div class="values__info__title">
@@ -93,12 +96,12 @@
 											<circle cx="31.5" cy="32.0654" r="30.8438" stroke="#7C5658" stroke-width="1.3125"></circle>
 										</svg>
 									</div>
-									<div class="values__numb">1</div>
+									<div class="values__numb">{{ index + 1  }}</div>
 								</div>
-								<h1 class="value__title">TIME TO CODE</h1>
+								<h1 class="value__title"> {{ value.title }}</h1>
 							</div>
 							<div class="value__descr">
-								<p class="value__p">Established with a vision to provide artists with an immersive and creative environment, we offer top-tier recording equipment, acoustically treated rooms</p>
+								<p class="value__p">{{ value.description }}</p>
 							</div>
 						</div>
 					</div>
@@ -114,53 +117,39 @@
 		<!--  -------------------- CODE MORE -------------------- -->
 		<section class="code-more">
 			<div class="code-more__hold">
-				<Marquee text="THIS ANOTHER MARQUEE ✺" theme="marquee__color"/>
+				<Marquee :text="data.code_more_marquee" theme="marquee__color"/>
 
 
 				<div class="code-more__time">
-					<h1 class="code-more__time__h1">TIME TO <br>KEEP LEARNING <br>
-					</h1>
+					<h1 class="code-more__time__h1">{{ data.title_code_more }}</h1>
 				</div>
 				<div class="code-more__big-ctn">
 					<div class="code-more__big-title">
-						<h1 class="code-more__big__h1">CODE <br>
-						</h1>
-						<h1 class="code-more__big__h1__2">MORE <br>
-						</h1>
+						<h1 class="code-more__big__h1">{{ data.big_1_code_more }}</h1>
+						<h1 class="code-more__big__h1__2">{{ data.big_2_code_more }}</h1>
 					</div>
 					<div class="code-more__descr">
-						<p class="code-more__descr__p">Established with a vision to provide artists with an immersive and creative environment, we offer top-tier recording equipment, acoustically treated rooms</p>
+						<p class="code-more__descr__p">{{ data.description_code_more }}</p>
 					</div>
 				</div>
 				<div class="code-more__cta">
-					<div class="code-more__cta__ctn">
+					<a :href="data.url_code_more" target="_blank" class="code-more__cta__ctn">
 						<div class="code-more__cta__svg w-embed">
 							<CtaStarSvg/>
 						</div>
-						<div class="code-more__cta__text">JOIN NOW</div>
-					</div>
+						<div class="code-more__cta__text">{{ data.label_code_more }}</div>
+					</a>
 				</div>
 				<div class="code-more__lines">
-					<div class="code-more__lines__each">
-						<h1 class="code-more__lines__text">A WITTY AND UPBEAT PLACE <br>
-						</h1>
+
+					<div v-for="item, index in data.code_more_group" :key="value" class="code-more__lines__each">
+						<h1 class="code-more__lines__text" :data-line="index">{{ item.line }}</h1>
 					</div>
-					<div class="code-more__lines__each">
-						<h1 class="code-more__lines__text">FOR WEBFLOW DEVELOPERS <br>
-						</h1>
-					</div>
-					<div class="code-more__lines__each">
-						<h1 class="code-more__lines__text">TO LEARN, SHARE KNOWLEDGE <br>
-						</h1>
-					</div>
-					<div class="code-more__lines__each">
-						<h1 class="code-more__lines__text">AND NETWORK <br>
-						</h1>
-					</div>
+
 				</div>
 			</div>
 		</section>
-		<Footer/>
+		<Footer :postData="data" />
 	</div>
 </template>
 
@@ -168,13 +157,6 @@
 	import navigations from "@/helpers/navigation.js";
 	const { client } = usePrismic()
 	const  { data } = await client.getSingle("homepage");
-
-
-	// const { data: page } = await useAsyncData( async () => {
-	//     const document = await client.getSingle("homepage");
-	//     console.log(document.body)
-	//     return document;
-	// });
 
 	definePageMeta({
 		pageTransition: navigations 
@@ -187,14 +169,6 @@
 	})
 </script>
 <script>
-	// const { client } = usePrismic()
-	// const { data, pending, error, refresh } = await useAsyncData(
-	//     'mountains',
-	//     () => $fetch('https://api.nuxtjs.dev/mountains')
-	// )
-
-	// const { data: cmsData } = await useAsyncData(() => client.getByUID('homepage'))
-	// const page = cmsData && cmsData.value ? cmsData.value.data : {title: 'page not found'}
 
 	export default {
 		methods: {
@@ -204,7 +178,6 @@
 		},
 
 		async asyncData({ $prismic }) {
-			console.log('oioioio')
 			console.log($prismic)
 			// const { data } = await $prismic.api.getSingle('homepage')
 			// console.log(data)
