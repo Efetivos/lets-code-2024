@@ -17,6 +17,31 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	scrollbar-width: none;
+}
+
+html.lenis {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+::-webkit-scrollbar{ 
+	webkit-appearance: none;
+	width: 0;
 }
 html {
 	font-size: calc(100vw / 1920 * 10);
@@ -292,7 +317,7 @@ a {
 
 .project__holder {
 	height: 86rem;
-	grid-column-gap: 5.5rem;
+	grid-column-gap: 6.6rem;
 	display: flex;
 }
 
