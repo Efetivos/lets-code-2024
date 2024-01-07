@@ -282,7 +282,7 @@ a {
 }
 
 .showcase__list {
-	grid-row-gap: 16rem;
+	grid-row-gap: 20vh;
 	flex-direction: column;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -307,12 +307,13 @@ a {
 	position: relative;
 	overflow: hidden;
 	transform: translateZ(0);
+	background: #000;
 }
 
 .project__display__img {
 	width: 100%;
 	height: 100%;
-	opacity: .75;
+	opacity: .6;
 	object-fit: cover;
 	position: absolute;
 	top: 0%;
@@ -750,8 +751,9 @@ a {
 	}
 
 	.showcase__list {
-	padding-right: var(--gap);
-	padding-left: var(--gap);
+		grid-row-gap: 16rem;
+		padding-right: var(--gap);
+		padding-left: var(--gap);
 	}
 
 	.project__holder {
