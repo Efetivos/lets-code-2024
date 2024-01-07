@@ -162,7 +162,7 @@
 		pageTransition: navigations 
 	})
 	useHead({
-		title: 'Home | ' + data.meta_title,
+		title: 'Home | ' + data.metatitle,
 		bodyAttrs: {
 			class: 'index'
 		}
@@ -175,14 +175,6 @@
 			scrollDown(event) {
 				// window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
 			}
-		},
-
-		async asyncData({ $prismic }) {
-			console.log($prismic)
-			// const { data } = await $prismic.api.getSingle('homepage')
-			// console.log(data)
-			// return { data }
-			// return { data, slices: data.body  }
 		},
 		mounted() {
 			// console.log(this.data)

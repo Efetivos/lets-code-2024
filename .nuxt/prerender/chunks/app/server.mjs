@@ -3543,7 +3543,7 @@ const _routes = [
     meta: __nuxt_page_meta || {},
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./_nuxt/index-16f80590.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-83b46734.mjs').then((m) => m.default || m)
   }
 ];
 const appHead = { "meta": [{ "charset": "utf-8" }, { "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "hid": "description", "name": "description", "content": "This course will help and give you some essential insights into how we can achieve better results and goals without sacrificing any vital area of our life. After finishing it, you'll be able to unleash your best version." }, { "name": "format-detection", "content": "telephone=no" }, { "name": "theme-color", "content": "#000000" }, { "name": "og:image", "content": "/cover.png" }, { "name": "og:image:secure_url", "content": "/cover.png" }, { "name": "og:image:width", "content": "1200" }, { "name": "og:image:height", "content": "630" }, { "name": "msapplication-TileColor", "content": "#000000" }], "link": [{ "rel": "icon", "type": "image/png", "href": "/favicon.png" }], "style": [], "script": [], "noscript": [], "title": "Let's Code Eat & Have Fun", "htmlAttrs": { "lang": "en" } };

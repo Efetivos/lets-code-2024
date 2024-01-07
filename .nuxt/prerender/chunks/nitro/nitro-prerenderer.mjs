@@ -535,164 +535,171 @@ const errorHandler = (async function errorhandler(error, event) {
 });
 
 const assets = {
+  "/.DS_Store": {
+    "type": "text/plain; charset=utf-8",
+    "etag": "\"1804-3y++sUAKzaCQmjLBz2v0kvESHgc\"",
+    "mtime": "2024-01-07T14:38:56.092Z",
+    "size": 6148,
+    "path": "../../.output/public/.DS_Store"
+  },
   "/cover.png": {
     "type": "image/png",
     "etag": "\"85f80-Xvy/1DM1PZCEAU4eW+5LBqNwuQM\"",
-    "mtime": "2024-01-07T14:31:40.655Z",
+    "mtime": "2024-01-07T14:38:56.091Z",
     "size": 548736,
     "path": "../../.output/public/cover.png"
   },
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
-    "etag": "\"18cf6-dHS9aftiLKehVIkwmAKaSmou2go\"",
-    "mtime": "2024-01-07T14:31:40.653Z",
-    "size": 101622,
+    "etag": "\"18c8a-cVF1k2nXw0w7hlhg8b7gJkL4WpY\"",
+    "mtime": "2024-01-07T14:38:56.090Z",
+    "size": 101514,
     "path": "../../.output/public/favicon.ico"
   },
   "/favicon.png": {
     "type": "image/png",
-    "etag": "\"2ee-bUquvhvR8QIF8wqsd3zCbV79fIQ\"",
-    "mtime": "2024-01-07T14:31:40.652Z",
-    "size": 750,
+    "etag": "\"2ef-TDgUAVDNbVqakBSPBN6X1Cur6Mg\"",
+    "mtime": "2024-01-07T14:38:56.089Z",
+    "size": 751,
     "path": "../../.output/public/favicon.png"
   },
   "/_nuxt/Pathway_Gothic_One-400-1.4b208a67.woff2": {
     "type": "font/woff2",
     "etag": "\"28a4-PuktTCovoFN7Hbq8Y2NU9uHVGJg\"",
-    "mtime": "2024-01-07T14:31:40.651Z",
+    "mtime": "2024-01-07T14:38:56.088Z",
     "size": 10404,
     "path": "../../.output/public/_nuxt/Pathway_Gothic_One-400-1.4b208a67.woff2"
   },
   "/_nuxt/Pathway_Gothic_One-400-2.021641f5.woff2": {
     "type": "font/woff2",
     "etag": "\"3690-JBHpBpPO6aucnRBD89hRhKbd2C4\"",
-    "mtime": "2024-01-07T14:31:40.651Z",
+    "mtime": "2024-01-07T14:38:56.088Z",
     "size": 13968,
     "path": "../../.output/public/_nuxt/Pathway_Gothic_One-400-2.021641f5.woff2"
   },
   "/_nuxt/Space_Grotesk-400-3.c9ab650c.woff2": {
     "type": "font/woff2",
     "etag": "\"1a20-D8J2FpMfZQqEAPELFzP2DdX6wW0\"",
-    "mtime": "2024-01-07T14:31:40.651Z",
+    "mtime": "2024-01-07T14:38:56.088Z",
     "size": 6688,
     "path": "../../.output/public/_nuxt/Space_Grotesk-400-3.c9ab650c.woff2"
   },
   "/_nuxt/Space_Grotesk-400-4.c996c3bb.woff2": {
     "type": "font/woff2",
     "etag": "\"474c-CWajZfPjXwY9us4LGr5kbovWQKU\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "mtime": "2024-01-07T14:38:56.087Z",
     "size": 18252,
     "path": "../../.output/public/_nuxt/Space_Grotesk-400-4.c996c3bb.woff2"
   },
   "/_nuxt/Space_Grotesk-400-5.7d707172.woff2": {
     "type": "font/woff2",
     "etag": "\"570c-lwe4ailSVWJFL2VM9K9jMnxV8vs\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "mtime": "2024-01-07T14:38:56.087Z",
     "size": 22284,
     "path": "../../.output/public/_nuxt/Space_Grotesk-400-5.7d707172.woff2"
   },
-  "/_nuxt/_uid_.d8487396.js": {
+  "/_nuxt/_uid_.03f92d05.js": {
     "type": "application/javascript",
-    "etag": "\"482-dTx22sGMOEfTxAmU0A/tbzURU58\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "etag": "\"482-+BR8j9CoTL+eGFo+iPe9mZnO3oE\"",
+    "mtime": "2024-01-07T14:38:56.087Z",
     "size": 1154,
-    "path": "../../.output/public/_nuxt/_uid_.d8487396.js"
+    "path": "../../.output/public/_nuxt/_uid_.03f92d05.js"
   },
-  "/_nuxt/blog.bec8e44b.js": {
+  "/_nuxt/blog.205b77bf.js": {
     "type": "application/javascript",
-    "etag": "\"36f-vQWTItt7s0wsP254ZBgYrCcHFmM\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "etag": "\"36f-TAF/GbXwy1YbQ6lv8KYwM4E8bQY\"",
+    "mtime": "2024-01-07T14:38:56.087Z",
     "size": 879,
-    "path": "../../.output/public/_nuxt/blog.bec8e44b.js"
+    "path": "../../.output/public/_nuxt/blog.205b77bf.js"
   },
   "/_nuxt/browser.436b8d4e.js": {
     "type": "application/javascript",
     "etag": "\"7fe-shKyckeaFgumL60MhbUDtuKqSu8\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "mtime": "2024-01-07T14:38:56.086Z",
     "size": 2046,
     "path": "../../.output/public/_nuxt/browser.436b8d4e.js"
   },
-  "/_nuxt/entry.506c9df0.js": {
+  "/_nuxt/entry.9bd0ade1.js": {
     "type": "application/javascript",
-    "etag": "\"4b1b7-00swoNHv0WXrk7WFiuu97HAopdU\"",
-    "mtime": "2024-01-07T14:31:40.650Z",
+    "etag": "\"4b1b7-eqVVO363CN2j5QeMCUPSKfx3e/Q\"",
+    "mtime": "2024-01-07T14:38:56.086Z",
     "size": 307639,
-    "path": "../../.output/public/_nuxt/entry.506c9df0.js"
+    "path": "../../.output/public/_nuxt/entry.9bd0ade1.js"
+  },
+  "/_nuxt/error-404.79bdf67e.js": {
+    "type": "application/javascript",
+    "etag": "\"8ad-PanoXjy/Kk6wztxxsYMKedh6iV0\"",
+    "mtime": "2024-01-07T14:38:56.086Z",
+    "size": 2221,
+    "path": "../../.output/public/_nuxt/error-404.79bdf67e.js"
   },
   "/_nuxt/error-404.7fc72018.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"e2e-iNt1cqPQ0WDudfCTZVQd31BeRGs\"",
-    "mtime": "2024-01-07T14:31:40.649Z",
+    "mtime": "2024-01-07T14:38:56.085Z",
     "size": 3630,
     "path": "../../.output/public/_nuxt/error-404.7fc72018.css"
-  },
-  "/_nuxt/error-404.b028cb2c.js": {
-    "type": "application/javascript",
-    "etag": "\"8ad-iKOgn3v8sxG6/4hpkHRpwFV+QaI\"",
-    "mtime": "2024-01-07T14:31:40.649Z",
-    "size": 2221,
-    "path": "../../.output/public/_nuxt/error-404.b028cb2c.js"
-  },
-  "/_nuxt/error-500.7d6c7e67.js": {
-    "type": "application/javascript",
-    "etag": "\"756-4UzC+wNYeMBinaJR1J8WEjN3ag8\"",
-    "mtime": "2024-01-07T14:31:40.649Z",
-    "size": 1878,
-    "path": "../../.output/public/_nuxt/error-500.7d6c7e67.js"
   },
   "/_nuxt/error-500.c5df6088.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"79e-ByRo+49BgcevWdRjJy3CMx2IA5k\"",
-    "mtime": "2024-01-07T14:31:40.648Z",
+    "mtime": "2024-01-07T14:38:56.085Z",
     "size": 1950,
     "path": "../../.output/public/_nuxt/error-500.c5df6088.css"
   },
-  "/_nuxt/index.97e5430f.js": {
+  "/_nuxt/error-500.d58853d3.js": {
     "type": "application/javascript",
-    "etag": "\"cb69-/i6wtBvDSeGky4NfcqSMZT7rFaw\"",
-    "mtime": "2024-01-07T14:31:40.648Z",
-    "size": 52073,
-    "path": "../../.output/public/_nuxt/index.97e5430f.js"
+    "etag": "\"756-YVSNgN85GKSJ/xMGgSpC8YP3eqo\"",
+    "mtime": "2024-01-07T14:38:56.085Z",
+    "size": 1878,
+    "path": "../../.output/public/_nuxt/error-500.d58853d3.js"
+  },
+  "/_nuxt/index.2447e110.js": {
+    "type": "application/javascript",
+    "etag": "\"cb5e-/nTnEEHU4q70hpVbEJiWACdL/+A\"",
+    "mtime": "2024-01-07T14:38:56.085Z",
+    "size": 52062,
+    "path": "../../.output/public/_nuxt/index.2447e110.js"
   },
   "/css/nuxt-google-fonts.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"bed-XZOximsxbcJsZWjqTtsTmX5Asg4\"",
-    "mtime": "2024-01-07T14:31:40.647Z",
+    "mtime": "2024-01-07T14:38:56.084Z",
     "size": 3053,
     "path": "../../.output/public/css/nuxt-google-fonts.css"
   },
   "/fonts/Pathway_Gothic_One-400-1.woff2": {
     "type": "font/woff2",
     "etag": "\"28a4-PuktTCovoFN7Hbq8Y2NU9uHVGJg\"",
-    "mtime": "2024-01-07T14:31:40.646Z",
+    "mtime": "2024-01-07T14:38:56.083Z",
     "size": 10404,
     "path": "../../.output/public/fonts/Pathway_Gothic_One-400-1.woff2"
   },
   "/fonts/Pathway_Gothic_One-400-2.woff2": {
     "type": "font/woff2",
     "etag": "\"3690-JBHpBpPO6aucnRBD89hRhKbd2C4\"",
-    "mtime": "2024-01-07T14:31:40.646Z",
+    "mtime": "2024-01-07T14:38:56.083Z",
     "size": 13968,
     "path": "../../.output/public/fonts/Pathway_Gothic_One-400-2.woff2"
   },
   "/fonts/Space_Grotesk-400-3.woff2": {
     "type": "font/woff2",
     "etag": "\"1a20-D8J2FpMfZQqEAPELFzP2DdX6wW0\"",
-    "mtime": "2024-01-07T14:31:40.646Z",
+    "mtime": "2024-01-07T14:38:56.082Z",
     "size": 6688,
     "path": "../../.output/public/fonts/Space_Grotesk-400-3.woff2"
   },
   "/fonts/Space_Grotesk-400-4.woff2": {
     "type": "font/woff2",
     "etag": "\"474c-CWajZfPjXwY9us4LGr5kbovWQKU\"",
-    "mtime": "2024-01-07T14:31:40.645Z",
+    "mtime": "2024-01-07T14:38:56.082Z",
     "size": 18252,
     "path": "../../.output/public/fonts/Space_Grotesk-400-4.woff2"
   },
   "/fonts/Space_Grotesk-400-5.woff2": {
     "type": "font/woff2",
     "etag": "\"570c-lwe4ailSVWJFL2VM9K9jMnxV8vs\"",
-    "mtime": "2024-01-07T14:31:40.645Z",
+    "mtime": "2024-01-07T14:38:56.082Z",
     "size": 22284,
     "path": "../../.output/public/fonts/Space_Grotesk-400-5.woff2"
   }
