@@ -391,7 +391,7 @@ a {
 	.project.is-info {
 		transform: translateX(-61.4vw);
 	}
-	
+
 	.is-info .project__display {
 		cursor: pointer;
 	}
@@ -750,13 +750,17 @@ a {
 	border-radius: 1.5rem;
 	padding: 0.7rem 2.1rem;
 	display: flex;
+	background-color: transparent;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	
 	border: 2px solid var(--line-color);
+	transition: all 0.2s ease-in-out;
 }
-
+.social:hover {
+	background-color: var(--soft);
+	color: var(--color);
+}
 .header__trg-menu {
 	width: 11rem;
 	height: 4.3rem;

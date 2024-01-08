@@ -46,7 +46,21 @@ _sfc_main$4.setup = (props, ctx) => {
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$3]]);
 const _sfc_main$3 = {
   props: ["postData"],
+  methods: {
+    onClick(event) {
+    }
+  },
   mounted() {
+    if (window.innerWidth > 1024) {
+      this.$el.querySelector(".project__info").addEventListener("click", () => {
+        this.$el.classList.add("is-info");
+      });
+      this.$el.querySelector(".project__display").addEventListener("click", () => {
+        if (!this.$el.classList.contains("is-info"))
+          return;
+        this.$el.classList.remove("is-info");
+      });
+    }
   }
 };
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
@@ -174,4 +188,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-83b46734.mjs.map
+//# sourceMappingURL=index-876754ba.mjs.map
