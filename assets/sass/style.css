@@ -315,6 +315,12 @@ a {
 	display: flex;
 }
 
+.project {
+	transform: translateX(0vw);
+	transition: transform .8s cubic-bezier(0.69, 0, 0.01, 1.01);
+	will-change: transform;
+}
+
 .project__holder {
 	height: 86rem;
 	grid-column-gap: 6.6rem;
@@ -379,6 +385,21 @@ a {
 	position: relative;
 	overflow: hidden;
 	transform: translateZ(0);
+	cursor: pointer;
+}
+@media only screen and (min-width: 1025px) {
+	.project.is-info {
+		transform: translateX(-61.4vw);
+	}
+	
+	.is-info .project__display {
+		cursor: pointer;
+	}
+	
+	.is-info .project__info {
+		cursor: default;
+	}
+	
 }
 
 .project__info__h1 {
@@ -457,6 +478,11 @@ a {
 .values__li {
 	flex-direction: row;
 	display: flex;
+}
+@media only screen and (min-width: 1025px) {
+	.values__li:nth-child(even) {
+		flex-direction: row-reverse;
+	}
 }
 
 .values__media {

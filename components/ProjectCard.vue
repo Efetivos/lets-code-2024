@@ -31,6 +31,23 @@
 <script>
     export default {
         props: ['postData'],
-        mounted() { },
+        methods: {
+            onClick(event) {
+                
+            },
+        },
+        mounted() {
+            if(window.innerWidth > 1024) {
+                this.$el.querySelector('.project__info').addEventListener('click', ()=> {
+                    this.$el.classList.add('is-info')
+                })
+                
+                this.$el.querySelector('.project__display').addEventListener('click', ()=> {
+                    
+                    if(!this.$el.classList.contains('is-info')) return
+                    this.$el.classList.remove('is-info')
+                })
+            }
+        },
     }
 </script>
