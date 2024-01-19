@@ -3,6 +3,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { smooth_scroll } from './smooth-scroll';
+import Debug from "@/assets/js/webgl/W_utils/Debug.js";
+import { webgl_app } from '@/assets/js/webgl/webgl-app';
 import Time from '@/assets/js/utils/time';
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,6 +14,8 @@ import { home } from '../pages/home';
 import { about } from '../pages/about';
 class Transitions {
     constructor() {
+        this.debug = new Debug()
+        this.webgl_active = true
         return;
     }
 
@@ -101,6 +105,21 @@ class Transitions {
         this.body = document.querySelector('body')
         this.time = new Time()
         smooth_scroll.setLenis(this.time)
+        if(!this.webgl_active) {
+            this.body.classList.add('no-webgl')
+            return
+        }
+        if(this.debug.active) {
+            gsap.delayedCall(0.01, () => {
+                webgl_app.init(document.querySelector("canvas.webgl"), this.debug);
+                smooth_scroll.setLenis(webgl_app)
+            })
+        }
+        else {
+            this.debug.active = false
+            webgl_app.init(document.querySelector("canvas.webgl"), this.debug);
+            smooth_scroll.setLenis(webgl_app)
+        }
     }
 
 }

@@ -39,6 +39,7 @@ export default defineNuxtConfig ({
 	},
 
 	vite: {
+		assetsInclude: ['**/*.glb'],
 	},
 	modules: [
 		["@nuxtjs/prismic", {

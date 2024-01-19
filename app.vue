@@ -5,9 +5,7 @@
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
-		<!-- <Sketch/>
-		<Splash/>
-		<Preloader/> -->
+		<Sketch/>
 	</div>
 </template>
 <script setup>
