@@ -112,13 +112,11 @@ class Transitions {
         if(this.debug.active) {
             gsap.delayedCall(0.01, () => {
                 webgl_app.init(document.querySelector("canvas.webgl"), this.debug);
-                smooth_scroll.setLenis(webgl_app)
             })
         }
         else {
             this.debug.active = false
             webgl_app.init(document.querySelector("canvas.webgl"), this.debug);
-            smooth_scroll.setLenis(webgl_app)
         }
     }
 

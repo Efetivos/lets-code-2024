@@ -17,7 +17,6 @@ class WebGLApp {
     this.html.classList.add('is-gl-splash')
     // this options
     this.canvas = canvas;
-    alert('WebGLApp')
 
     // instances
     this.debug = debug;

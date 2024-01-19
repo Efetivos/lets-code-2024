@@ -1,4 +1,4 @@
-<template lang="">
+<template>
 	<div data-page="index" class="page page-index index">
 
 
@@ -142,7 +142,7 @@
 				</div>
 				<div class="code-more__lines">
 
-					<div v-for="item, index in data.code_more_group" :key="value" class="code-more__lines__each">
+					<div v-for="item, index in data.code_more_group" :key="item" class="code-more__lines__each">
 						<h1 class="code-more__lines__text" :data-line="index">{{ item.line }}</h1>
 					</div>
 

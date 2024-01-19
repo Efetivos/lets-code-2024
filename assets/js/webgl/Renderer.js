@@ -42,7 +42,7 @@ export default class Renderer {
         this.instance.toneMappingExposure = 1.75;
         this.instance.shadowMap.enabled = true;
         this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
-        this.instance.useLegacyLights = true;
+        // this.instance.useLegacyLights = true;
     }
 
     
