@@ -19,6 +19,8 @@ declare module 'nuxt/schema' {
    prismic: {
       endpoint: string,
 
+      environment: string,
+
       clientConfig: any,
 
       client: string,

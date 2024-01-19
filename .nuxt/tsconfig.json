@@ -3,87 +3,99 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "strict": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "types": [],
+    "verbatimModuleSyntax": true,
     "allowJs": true,
-    "baseUrl": "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
     "paths": {
       "~": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        ".."
       ],
       "~/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "@": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        ".."
       ],
       "@/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "~~": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        ".."
       ],
       "~~/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "@@": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        ".."
       ],
       "@@/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "assets": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/public/*"
+        "../public/*"
       ],
       "#app": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/nuxt/dist/app"
+        "../node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/nuxt/dist/app/*"
+        "../node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/nuxt/dist/app/compat/vue-demi"
+        "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#vue-router": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/vue-router"
+        "./vue-router-stub"
       ],
       "#imports": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/imports"
+        "./imports"
       ],
       "#build": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt"
+        "."
       ],
       "#build/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/*"
+        "./*"
       ],
       "#components": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/components"
+        "./components"
       ]
     }
   },
   "include": [
     "./nuxt.d.ts",
-    "../**/*"
+    "../**/*",
+    "../node_modules/@nuxtjs/prismic/runtime",
+    "../node_modules/@nuxtjs/google-fonts/runtime",
+    "../node_modules/@nuxt/telemetry/runtime",
+    ".."
   ],
   "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/prismic/runtime/server",
+    "../node_modules/@nuxtjs/google-fonts/runtime/server",
+    "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",
     "../.output"
   ]

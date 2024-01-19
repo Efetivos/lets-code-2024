@@ -8,57 +8,66 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        "./.."
       ],
       "~/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "@": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        "./.."
       ],
       "@/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "~~": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        "./.."
       ],
       "~~/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "@@": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt"
+        "./.."
       ],
       "@@/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/*"
+        "../*"
       ],
       "assets": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/public/*"
+        "../public/*"
       ]
     }
   },
   "include": [
-    "/Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
+    "../node_modules/@nuxtjs/prismic/runtime/server",
+    "../node_modules/@nuxtjs/google-fonts/runtime/server",
+    "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }

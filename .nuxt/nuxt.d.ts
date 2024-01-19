@@ -9,11 +9,10 @@
 /// <reference types="vue-router" />
 /// <reference path="types/middleware.d.ts" />
 /// <reference path="types/layouts.d.ts" />
-/// <reference path="vue-router.d.ts" />
+/// <reference path="vue-router-stub.d.ts" />
 /// <reference path="components.d.ts" />
 /// <reference path="types/imports.d.ts" />
 /// <reference path="imports.d.ts" />
-/// <reference path="nuxt-config-schema" />
 /// <reference path="schema/nuxt.schema.d.ts" />
 /// <reference path="types/nitro.d.ts" />
 
