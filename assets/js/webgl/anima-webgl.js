@@ -11,17 +11,20 @@ class AnimaWebGL {
 
 	setters() {
 	}
-	
 
-    animaModelHero(modelHero) {
+
+
+	//? - =========================  MODEL HERO  ========================= -//
+	//? - =========================  MODEL HERO  ========================= -//
+    animaModelHero(model) {
         let that = this
         this.$hero__top = document.querySelector('.hero')
         this.$hero_release = document.querySelector('.hero__subtitles')
-        let scaleModel = modelHero.scale.x
+        let scaleModel = model.scale.x
         this.tl_move_modelHero = gsap.timeline({ paused: true })
-            .fromTo(modelHero.position, { y: modelHero.position.y }, { duration: 1,  y: 3.5, ease: 'none' })
-            .fromTo(modelHero.scale, { x: scaleModel , y: scaleModel , z: scaleModel }, { duration: 1,  x: 0.1, y: 0.1, z: 0.1, ease: 'none' }, 0)
-            .to(modelHero.rotation, { duration: 1, x: `-=0.7`, y: `+=6`, ease: 'none' }, 0)
+            .fromTo(model.position, { y: model.position.y }, { duration: 1,  y: 3.5, ease: 'none' })
+            .fromTo(model.scale, { x: scaleModel , y: scaleModel , z: scaleModel }, { duration: 1,  x: 0.1, y: 0.1, z: 0.1, ease: 'none' }, 0)
+            .to(model.rotation, { duration: 1, x: `-=0.7`, y: `+=6`, ease: 'none' }, 0)
 
         ScrollTrigger.create({
             trigger: this.$hero__top,
@@ -40,8 +43,43 @@ class AnimaWebGL {
             }
         });
 
-		this.onMouseMove(modelHero)
+		this.onMouseMove(model)
     }
+
+
+
+	//? - =========================  MODEL code  ========================= -//
+	//? - =========================  MODEL code  ========================= -//
+    animaModelCode(modelCode) {
+        let that = this
+        this.$code__top = document.querySelector('.code-more__time__h1')
+        this.$code_release = document.querySelector('.code-more__descr__p')
+        let scaleModel = modelCode.scale.x
+        this.tl_move_modelCode = gsap.timeline({ paused: true })
+            .fromTo(modelCode.position, { y: -3 }, { duration: 1,  y: 3, ease: 'none' })
+            .fromTo(modelCode.scale, { x: scaleModel , y: scaleModel , z: scaleModel }, { duration: 1,  x: `+=0.1`, y: `+=0.1`, z: `+=0.1`, ease: 'none' }, 0)
+            .to(modelCode.rotation, { duration: 1, x: `-=0.1`, y: `+=2`, ease: 'none' }, 0)
+
+        ScrollTrigger.create({
+            trigger: this.$code__top,
+            start: "top 100%",
+            endTrigger: this.$code_release,
+            end: "bottom 75",
+            onEnter: () => {
+            },
+            onEnterBack: () => {
+
+            },
+            onLeave: () => {
+            },
+            onUpdate: self => {
+                that.tl_move_modelCode.progress(self.progress.toFixed(3))
+            }
+        });
+    }
+
+
+
 
 	//?  -------------------------- MOUSE MOVE -------------------------- //
     //?  -------------------------- MOUSE MOVE -------------------------- //

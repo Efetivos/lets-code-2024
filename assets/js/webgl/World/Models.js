@@ -37,7 +37,6 @@ export default class Models {
 					// model.material.color = new THREE.Color('blue')
 				} else {
 					// model.material.color = new THREE.Color('yellow')
-
 				}
 			});
 
@@ -45,9 +44,14 @@ export default class Models {
 		});
 
 		this.setModelHero()
+		this.setModelCodeMore()
 	}
 
 
+
+
+	//? - =========================  MODEL HERO  ========================= -//
+	//? - =========================  MODEL HERO  ========================= -//
 
 	setModelHero() {
 		const cube_hero = this.cube_model.clone()
@@ -61,8 +65,45 @@ export default class Models {
 		cube_hero.rotation.x = 0.52;
 		cube_hero.rotation.y = Math.PI * 0.25;
 		this.scene.add(cube_hero);
-		this.objs.push(cube_hero)
 		anima_webgl.animaModelHero(cube_hero);
-
 	}
+	
+
+
+
+	
+	//? - =========================  MODEL HERO  ========================= -//
+	//? - =========================  MODEL HERO  ========================= -//
+
+	setModelCodeMore() {
+		const cube_code_more = this.cube_model.clone()
+		cube_code_more.name = 'cube_code_more'
+		cube_code_more.children.forEach((model, i) => {
+			if (model.name.indexOf('BOX') > -1) {
+				let material = model.material.clone()
+				model.material = material
+				material.color = new THREE.Color('black')
+			} else {
+				let material = model.material.clone()
+				model.material = material
+				material.color = new THREE.Color('white')
+			}
+		});
+		if(window.innerWidth > 1024) {
+			cube_code_more.position.y = 0;
+			cube_code_more.position.x = 1.5;
+			cube_code_more.scale.setScalar(0.6);
+		} else {
+			cube_code_more.scale.setScalar(0.35);
+			cube_code_more.position.y = 0;
+		}
+		cube_code_more.rotation.x = 0.52;
+		cube_code_more.rotation.y = Math.PI * 0.16;
+		cube_code_more.rotation.z = 0.2;
+		this.scene.add(cube_code_more);
+		anima_webgl.animaModelCode(cube_code_more);
+	}
+
+
+
 }
