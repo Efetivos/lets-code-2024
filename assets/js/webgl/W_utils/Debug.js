@@ -1,6 +1,6 @@
 export default class Debug {
     constructor() {
-        this.active = true
+        this.active = false
         let has_gui = false
         this.ui = false
         if(!this.active) return

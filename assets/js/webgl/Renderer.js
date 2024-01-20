@@ -1,5 +1,11 @@
 import * as THREE from 'three'
 
+// import { EffectComposer, RenderPass, EffectPass } from 'postprocessing'
+//PostProcessing
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
+import { DotScreenPass } from 'three/examples/jsm/postprocessing/DotScreenPass'
+
 export default class Renderer {
     constructor(webglapp) {
         this.webgl_app = webglapp
@@ -12,6 +18,7 @@ export default class Renderer {
 
         //calling
         this.setInstance()
+        this.onEffectComposer()
 
     }
 
@@ -48,6 +55,32 @@ export default class Renderer {
     
     
     
+
+	//? - =========================  PostProcessing  ========================= -//
+	//? - =========================  PostProcessing  ========================= -//
+	onEffectComposer(){
+		this.renderTarget = new THREE.WebGLRenderTarget(
+			800,
+			600, {
+				samples: 2
+			}
+		)
+		this.effectComposer = new EffectComposer(this.instance, this.renderTarget)
+		this.effectComposer.setSize(this.sizes.width, this.sizes.height)
+		this.effectComposer.setPixelRatio(this.sizes.pixelRatio)
+
+		this.renderPass = new RenderPass(this.scene, this.camera.instance)
+		this.effectComposer.addPass(this.renderPass)
+
+		
+		this.dotScreenPass = new DotScreenPass()
+		this.dotScreenPass.enabled = true 
+		this.effectComposer.addPass(this.dotScreenPass)
+
+
+
+	}
+
     
     
     
@@ -77,6 +110,7 @@ export default class Renderer {
     //? - =========================  update  ========================= -//
     update() {
         this.instance.render(this.scene, this.camera.instance)
+        // this.effectComposer.render()
     }
     
 }
