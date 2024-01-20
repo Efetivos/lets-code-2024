@@ -4,8 +4,8 @@ DAILY: -00:00
  
 
 # BoilerPlate Nuxt3 and Prismic
-![PRs Welcome](https://img.shields.io/badge/Building_Status-96%25-brightgreen)
 ![CMS Status](https://img.shields.io/badge/CMS-Progressing-brightgreen.svg?color=informational)
+![PRs Welcome](https://img.shields.io/badge/Building_Status-96%25-brightgreen)
 
   
 ![Screenshot](./cover.png)

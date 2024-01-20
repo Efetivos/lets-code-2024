@@ -1,4 +1,4 @@
-import { version, ref, watchEffect, watch, getCurrentInstance, hasInjectionContext, inject, shallowRef, toRef, onServerPrefetch, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, resolveDynamicComponent, isReadonly, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
+import { version, ref, watchEffect, watch, getCurrentInstance, inject, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, hasInjectionContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
 import { $fetch } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/ofetch/dist/node.mjs';
 import { createHooks } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/hookable/dist/index.mjs';
 import { getContext } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/unctx/dist/index.mjs';
@@ -7,7 +7,7 @@ import { defineHeadPlugin, composableNames } from 'file:///Users/victorcosta/Doc
 import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION, routerKey } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue-router/dist/vue-router.node.mjs';
 import { createError as createError$1, sanitizeStatusCode, getRequestHeader, setCookie, getCookie, deleteCookie } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/h3/dist/index.mjs';
 import { hasProtocol, joinURL, parseURL, parseQuery, withQuery, isScriptProtocol, withTrailingSlash, withoutTrailingSlash } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/ufo/dist/index.mjs';
-import gsap$1$1, { gsap as gsap$2 } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/gsap/dist/gsap.js';
+import { gsap as gsap$2 } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/gsap/dist/gsap.js';
 import Lenis from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/@studio-freight/lenis/dist/lenis.mjs';
 import * as THREE from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/three/build/three.module.js';
 import { GLTFLoader } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
@@ -3969,7 +3969,7 @@ class Environment {
     }
   }
 }
-gsap$1$1.registerPlugin(ScrollTrigger);
+gsap$2.registerPlugin(ScrollTrigger);
 class AnimaWebGL {
   constructor() {
     return;
@@ -3983,7 +3983,7 @@ class AnimaWebGL {
     this.$hero__top = (void 0).querySelector(".hero");
     this.$hero_release = (void 0).querySelector(".hero__subtitles");
     let scaleModel = model.scale.x;
-    this.tl_move_modelHero = gsap$1$1.timeline({ paused: true }).fromTo(model.position, { y: model.position.y }, { duration: 1, y: 3.5, ease: "none" }).fromTo(model.scale, { x: scaleModel, y: scaleModel, z: scaleModel }, { duration: 1, x: 0.1, y: 0.1, z: 0.1, ease: "none" }, 0).to(model.rotation, { duration: 1, x: `-=0.7`, y: `+=6`, ease: "none" }, 0);
+    this.tl_move_modelHero = gsap$2.timeline({ paused: true }).fromTo(model.position, { y: model.position.y }, { duration: 1, y: 3.5, ease: "none" }).fromTo(model.scale, { x: scaleModel, y: scaleModel, z: scaleModel }, { duration: 1, x: 0.1, y: 0.1, z: 0.1, ease: "none" }, 0).to(model.rotation, { duration: 1, x: `-=0.7`, y: `+=6`, ease: "none" }, 0);
     ScrollTrigger.create({
       trigger: this.$hero__top,
       start: "top top",
@@ -4008,7 +4008,7 @@ class AnimaWebGL {
     this.$code__top = (void 0).querySelector(".code-more__time__h1");
     this.$code_release = (void 0).querySelector(".code-more__descr__p");
     let scaleModel = modelCode.scale.x;
-    this.tl_move_modelCode = gsap$1$1.timeline({ paused: true }).fromTo(modelCode.position, { y: -3 }, { duration: 1, y: 3, ease: "none" }).fromTo(modelCode.scale, { x: scaleModel, y: scaleModel, z: scaleModel }, { duration: 1, x: `+=0.1`, y: `+=0.1`, z: `+=0.1`, ease: "none" }, 0).to(modelCode.rotation, { duration: 1, x: `-=0.1`, y: `+=2`, ease: "none" }, 0);
+    this.tl_move_modelCode = gsap$2.timeline({ paused: true }).fromTo(modelCode.position, { y: -3 }, { duration: 1, y: 3, ease: "none" }).fromTo(modelCode.scale, { x: scaleModel, y: scaleModel, z: scaleModel }, { duration: 1, x: `+=0.1`, y: `+=0.1`, z: `+=0.1`, ease: "none" }, 0).to(modelCode.rotation, { duration: 1, x: `-=0.1`, y: `+=2`, ease: "none" }, 0);
     ScrollTrigger.create({
       trigger: this.$code__top,
       start: "top 100%",
@@ -4036,10 +4036,10 @@ class AnimaWebGL {
         that.mouse.moved = true;
         let x = e.clientX;
         let y = e.clientY;
-        gsap$1$1.to(model.rotation, {
+        gsap$2.to(model.rotation, {
           duration: 3,
-          y: inital_rot.y - gsap$1$1.utils.mapRange(0, (void 0).innerWidth, -2, 2, x),
-          x: inital_rot.x - gsap$1$1.utils.mapRange(0, (void 0).innerHeight, -0.5, 0.5, y),
+          y: inital_rot.y - gsap$2.utils.mapRange(0, (void 0).innerWidth, -2, 2, x),
+          x: inital_rot.x - gsap$2.utils.mapRange(0, (void 0).innerHeight, -0.5, 0.5, y),
           ease: "expo.out",
           overwrite: true
         });
@@ -4049,10 +4049,10 @@ class AnimaWebGL {
         that.mouse.moved = true;
         let x = e.touches[0].clientX;
         let y = e.touches[0].clientY;
-        gsap$1$1.to(model.rotation, {
+        gsap$2.to(model.rotation, {
           duration: 6,
-          y: inital_rot.y - gsap$1$1.utils.mapRange(0, (void 0).innerWidth, -2, 2, x),
-          x: inital_rot.x - gsap$1$1.utils.mapRange(0, (void 0).innerHeight, -0.5, 0.5, y),
+          y: inital_rot.y - gsap$2.utils.mapRange(0, (void 0).innerWidth, -2, 2, x),
+          x: inital_rot.x - gsap$2.utils.mapRange(0, (void 0).innerHeight, -0.5, 0.5, y),
           ease: "expo.out",
           overwrite: true
         });
@@ -4507,39 +4507,17 @@ const pageTransition = {
   onAfterEnter: (el) => {
   }
 };
-const __nuxt_page_meta$2 = {
-  pageTransition
-};
-const __nuxt_page_meta$1 = {
-  pageTransition
-};
 const __nuxt_page_meta = {
   pageTransition
 };
 const _routes = [
-  {
-    name: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.name) ?? "article-uid",
-    path: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.path) ?? "/article/:uid()",
-    meta: __nuxt_page_meta$2 || {},
-    alias: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.alias) || [],
-    redirect: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.redirect) || void 0,
-    component: () => import('./_nuxt/_uid_-DzVShJVt.mjs').then((m) => m.default || m)
-  },
-  {
-    name: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.name) ?? "blog",
-    path: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.path) ?? "/blog",
-    meta: __nuxt_page_meta$1 || {},
-    alias: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.alias) || [],
-    redirect: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.redirect) || void 0,
-    component: () => import('./_nuxt/blog-P7K9oVwH.mjs').then((m) => m.default || m)
-  },
   {
     name: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.name) ?? "index",
     path: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.path) ?? "/",
     meta: __nuxt_page_meta || {},
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./_nuxt/index-ZDRv0ELq.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-Mt2Pg5eF.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -4578,7 +4556,6 @@ const appLayoutTransition = false;
 const appPageTransition = false;
 const appKeepalive = false;
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
-const asyncDataDefaults = { "deep": true };
 const routerOptions0 = {
   scrollBehavior(to, from, savedPosition) {
     var _a;
@@ -4897,121 +4874,10 @@ const onNuxtReady = (callback) => {
     return;
   }
 };
-const isDefer = (dedupe) => dedupe === "defer" || dedupe === false;
-function useAsyncData(...args) {
-  var _a;
-  const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
-  if (typeof args[0] !== "string") {
-    args.unshift(autoKey);
-  }
-  let [key, handler, options = {}] = args;
-  if (typeof key !== "string") {
-    throw new TypeError("[nuxt] [asyncData] key must be a string.");
-  }
-  if (typeof handler !== "function") {
-    throw new TypeError("[nuxt] [asyncData] handler must be a function.");
-  }
-  const nuxt = /* @__PURE__ */ useNuxtApp();
-  const getDefault = () => null;
-  const getDefaultCachedData = () => nuxt.isHydrating ? nuxt.payload.data[key] : nuxt.static.data[key];
-  options.server = options.server ?? true;
-  options.default = options.default ?? getDefault;
-  options.getCachedData = options.getCachedData ?? getDefaultCachedData;
-  options.lazy = options.lazy ?? false;
-  options.immediate = options.immediate ?? true;
-  options.deep = options.deep ?? asyncDataDefaults.deep;
-  options.dedupe = options.dedupe ?? "cancel";
-  const hasCachedData = () => ![null, void 0].includes(options.getCachedData(key));
-  if (!nuxt._asyncData[key] || !options.immediate) {
-    (_a = nuxt.payload._errors)[key] ?? (_a[key] = null);
-    const _ref = options.deep ? ref : shallowRef;
-    nuxt._asyncData[key] = {
-      data: _ref(options.getCachedData(key) ?? options.default()),
-      pending: ref(!hasCachedData()),
-      error: toRef(nuxt.payload._errors, key),
-      status: ref("idle")
-    };
-  }
-  const asyncData = { ...nuxt._asyncData[key] };
-  asyncData.refresh = asyncData.execute = (opts = {}) => {
-    if (nuxt._asyncDataPromises[key]) {
-      if (isDefer(opts.dedupe ?? options.dedupe)) {
-        return nuxt._asyncDataPromises[key];
-      }
-      nuxt._asyncDataPromises[key].cancelled = true;
-    }
-    if ((opts._initial || nuxt.isHydrating && opts._initial !== false) && hasCachedData()) {
-      return Promise.resolve(options.getCachedData(key));
-    }
-    asyncData.pending.value = true;
-    asyncData.status.value = "pending";
-    const promise = new Promise(
-      (resolve, reject) => {
-        try {
-          resolve(handler(nuxt));
-        } catch (err) {
-          reject(err);
-        }
-      }
-    ).then((_result) => {
-      if (promise.cancelled) {
-        return nuxt._asyncDataPromises[key];
-      }
-      let result = _result;
-      if (options.transform) {
-        result = options.transform(_result);
-      }
-      if (options.pick) {
-        result = pick(result, options.pick);
-      }
-      nuxt.payload.data[key] = result;
-      asyncData.data.value = result;
-      asyncData.error.value = null;
-      asyncData.status.value = "success";
-    }).catch((error) => {
-      if (promise.cancelled) {
-        return nuxt._asyncDataPromises[key];
-      }
-      asyncData.error.value = createError(error);
-      asyncData.data.value = unref(options.default());
-      asyncData.status.value = "error";
-    }).finally(() => {
-      if (promise.cancelled) {
-        return;
-      }
-      asyncData.pending.value = false;
-      delete nuxt._asyncDataPromises[key];
-    });
-    nuxt._asyncDataPromises[key] = promise;
-    return nuxt._asyncDataPromises[key];
-  };
-  const initialFetch = () => asyncData.refresh({ _initial: true });
-  const fetchOnServer = options.server !== false && nuxt.payload.serverRendered;
-  if (fetchOnServer && options.immediate) {
-    const promise = initialFetch();
-    if (getCurrentInstance()) {
-      onServerPrefetch(() => promise);
-    } else {
-      nuxt.hook("app:created", async () => {
-        await promise;
-      });
-    }
-  }
-  const asyncDataPromise = Promise.resolve(nuxt._asyncDataPromises[key]).then(() => asyncData);
-  Object.assign(asyncDataPromise, asyncData);
-  return asyncDataPromise;
-}
 async function refreshNuxtData(keys) {
   {
     return Promise.resolve();
   }
-}
-function pick(obj, keys) {
-  const newObj = {};
-  for (const key of keys) {
-    newObj[key] = obj[key];
-  }
-  return newObj;
 }
 const prismicKey = Symbol("prismic");
 const getSlots = (parent, slots, defaultPayload) => {
@@ -6279,8 +6145,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./_nuxt/error-404-sWo6l0MM.mjs').then((r) => r.default || r));
-    const _Error = defineAsyncComponent(() => import('./_nuxt/error-500-kkCSZHz5.mjs').then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import('./_nuxt/error-404-Y6wrbhIF.mjs').then((r) => r.default || r));
+    const _Error = defineAsyncComponent(() => import('./_nuxt/error-500-yW10pXK4.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -6298,7 +6164,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const IslandRenderer = defineAsyncComponent(() => import('./_nuxt/island-renderer-_H7pcwmo.mjs').then((r) => r.default || r));
+    const IslandRenderer = defineAsyncComponent(() => import('./_nuxt/island-renderer-pKXqL7O0.mjs').then((r) => r.default || r));
     const nuxtApp = /* @__PURE__ */ useNuxtApp();
     nuxtApp.deferHydration();
     nuxtApp.ssrContext.url;
@@ -6360,5 +6226,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, usePrismic as b, createError as c, useRoute as d, entry$1 as default, useAsyncData as e, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, usePrismic as b, createError as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map
