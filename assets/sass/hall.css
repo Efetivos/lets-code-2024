@@ -1,0 +1,116 @@
+.hero-hall .hero__eat-fun {
+	margin: 2rem 0 0 0;
+}
+@media only screen and (max-width: 579px) {
+    .hero-hall .hero__eat-fun__svg svg {
+        height: 3.3rem;
+    }
+}
+
+.hero-hall .hero__subtitles {
+	margin-top: 29vh;
+}
+
+/* ___________________ SHOWCASE ___________________  */
+/* ___________________ SHOWCASE ___________________  */
+.hall .showcase__title {
+	padding: 0 var(--gap);
+	align-items: flex-start;
+}
+
+a.showcase__submit {
+	align-items: center;
+	background-color: var(--white);
+	border-radius: 1rem;
+	color: var(--black);
+	display: flex;
+	height: 6.3rem;
+	justify-content: center;
+	text-decoration: none;
+	width: 31rem;
+	transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	border: 1px solid var(--line-soft);
+}
+
+.hall .showcase__descr {
+	width: 45vw;
+	color: var(--soft);
+}
+@media only screen and (max-width: 579px) {
+    .hall .showcase__descr {
+        width: 100%;
+    }
+}
+
+.hall p.showcase__p {
+	color: var(--soft);
+}
+
+.hall ul.showcase__list {
+	padding: 0 var(--gap);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+@media only screen and (max-width: 579px) {
+    .hall ul.showcase__list {
+        grid-template-columns: 1fr;
+        padding: 0 2.5rem;
+    }
+    
+}
+
+.hall-fame__display {
+	width: 100%;
+	position: relative;
+	aspect-ratio: 16/9;
+	border-top-left-radius: 0.5rem;
+	overflow: hidden;
+	transform: translateZ(0);
+	border-top-right-radius: 0.5rem;
+}
+
+img.hall-fame__display__img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.hall-fame__video {
+	position: absolute;
+	opacity: 0;
+}
+
+.hall-fame__info {
+	background: var(--color);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	padding: 2.5rem;
+	border: 1px solid var(--line-color);
+	border-top: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+a.hall-fame__cta {
+	margin: 0;
+}
+
+h1.hall-fame__info__h1 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: var(--line-soft);
+	margin: 0;
+}
+
+ul.hall-fame__socials {
+	display: flex;
+	gap: 1rem;
+}
+
+.hall-fame__socials a {
+	border: 1px solid var(--line-color);
+	padding: 0.7rem 1rem;
+	border-radius: 0.3rem;
+	font-size: 1.7rem;
+}
