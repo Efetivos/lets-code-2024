@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<MenuFixed :postData="data"/>
-		<MenuFS/>
+		<MenuFS :postData="data"/>
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>

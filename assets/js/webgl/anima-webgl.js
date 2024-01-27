@@ -16,6 +16,8 @@ class AnimaWebGL {
 	//? - =========================  MODEL HERO  ========================= -//
 	//? - =========================  MODEL HERO  ========================= -//
     animaModelHero(model) {
+
+        const $body = document.querySelector('body')
         let that = this
         this.$hero__top = document.querySelector('.hero')
         this.$hero_release = document.querySelector('.hero__subtitles')
@@ -38,6 +40,7 @@ class AnimaWebGL {
             onLeave: () => {
             },
             onUpdate: self => {
+                if(!$body.classList.contains('index')) return
                 that.tl_move_modelHero.progress(self.progress.toFixed(3))
             }
         });
@@ -50,6 +53,7 @@ class AnimaWebGL {
 	//? - =========================  MODEL code  ========================= -//
 	//? - =========================  MODEL code  ========================= -//
     animaModelCode(modelCode) {
+        const $body = document.querySelector('body')
         let that = this
         this.$code__top = document.querySelector('.code-more__time__h1')
         this.$code_release = document.querySelector('.code-more__descr__p')
@@ -72,6 +76,7 @@ class AnimaWebGL {
             onLeave: () => {
             },
             onUpdate: self => {
+                if(!$body.classList.contains('index')) return
                 that.tl_move_modelCode.progress(self.progress.toFixed(3))
             }
         });
@@ -83,11 +88,13 @@ class AnimaWebGL {
 	//?  -------------------------- MOUSE MOVE -------------------------- //
     //?  -------------------------- MOUSE MOVE -------------------------- //
 	onMouseMove(model) {
+        const $body = document.querySelector('body')
         this.mouse = { x: 0, y: 0, moved: false };
 		const inital_rot = { x: model.rotation.x, y: model.rotation.y };
         let that = this
         if(window.innerWidth > 1024) {
             this.$hero__top.addEventListener("mousemove", (e) => {
+                if(!$body.classList.contains('index')) return
                 that.mouse.moved = true;
                 let x = e.clientX ;
                 let y = e.clientY;
@@ -99,6 +106,7 @@ class AnimaWebGL {
         }
         else {
             this.$hero__top.addEventListener("touchmove", (e) => {
+                if(!$body.classList.contains('index')) return
                 that.mouse.moved = true;
 				let x = e.touches[0].clientX ;
 				let y = e.touches[0].clientY;

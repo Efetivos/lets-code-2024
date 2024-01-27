@@ -149,7 +149,7 @@
 				</div>
 			</div>
 		</section>
-		<Footer :postData="data" />
+		<Footer :postData="data"/>
 	</div>
 </template>
 
