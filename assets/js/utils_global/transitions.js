@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 import { home } from '../pages/home';
-import { about } from '../pages/about';
+import { hall } from '../pages/hall';
 class Transitions {
     constructor() {
         this.debug = new Debug()
@@ -41,8 +41,8 @@ class Transitions {
         if (pageName == 'index')  {
             home.init($current)
         }
-        if (pageName == 'about')  {
-            about.init($current)
+        if (pageName == 'hall')  {
+            hall.init($current)
         }
     }
 
@@ -58,7 +58,6 @@ class Transitions {
         this.$old = $old
         this.old_page_name = this.$old.dataset.page
         gsap.to(this.$old, { opacity: 0, duration: 1.2, ease: 'power3.inOut', onComplete: () =>{  
-            console.log(smooth_scroll.lenis)
             smooth_scroll.lenis.destroy()
             done() 
         } })

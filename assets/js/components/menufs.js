@@ -14,8 +14,8 @@ export class MenuFS {
         }
         this.time = 1
         this.animating = false
-        this.setters()
-        this.bindEvents()
+        // this.setters()
+        // this.bindEvents()
     }
 
 
