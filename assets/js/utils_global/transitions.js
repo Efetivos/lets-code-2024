@@ -58,6 +58,8 @@ class Transitions {
         this.$old = $old
         this.old_page_name = this.$old.dataset.page
         gsap.to(this.$old, { opacity: 0, duration: 1.2, ease: 'power3.inOut', onComplete: () =>{  
+            console.log(smooth_scroll.lenis)
+            smooth_scroll.lenis.destroy()
             done() 
         } })
 
@@ -88,7 +90,10 @@ class Transitions {
         history.scrollRestoration = "manual";
         this.$current = $current
         this.instancingPages($current, this.current_page_name)
-		gsap.to(this.$current, { opacity: 1, duration: 1.2, ease: 'power3.out', onComplete: () =>{  done() } })
+        smooth_scroll.setLenis(this.time)
+		gsap.to(this.$current, { opacity: 1, duration: 1.2, ease: 'power3.out', onComplete: () =>{  
+            done() 
+        } })
         //done()
     }
 
