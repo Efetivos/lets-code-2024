@@ -1,4 +1,4 @@
-import { version, ref, watchEffect, watch, getCurrentInstance, inject, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, hasInjectionContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, openBlock, createBlock, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
+import { version, ref, watchEffect, watch, getCurrentInstance, inject, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, hasInjectionContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, openBlock, createBlock, createTextVNode, toDisplayString, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
 import { $fetch } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/ofetch/dist/node.mjs';
 import { createHooks } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/hookable/dist/index.mjs';
 import { getContext } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/unctx/dist/index.mjs';
@@ -3979,6 +3979,7 @@ class AnimaWebGL {
   //? - =========================  MODEL HERO  ========================= -//
   //? - =========================  MODEL HERO  ========================= -//
   animaModelHero(model) {
+    const $body = (void 0).querySelector("body");
     let that = this;
     this.$hero__top = (void 0).querySelector(".hero");
     this.$hero_release = (void 0).querySelector(".hero__subtitles");
@@ -3996,6 +3997,8 @@ class AnimaWebGL {
       onLeave: () => {
       },
       onUpdate: (self2) => {
+        if (!$body.classList.contains("index"))
+          return;
         that.tl_move_modelHero.progress(self2.progress.toFixed(3));
       }
     });
@@ -4004,6 +4007,7 @@ class AnimaWebGL {
   //? - =========================  MODEL code  ========================= -//
   //? - =========================  MODEL code  ========================= -//
   animaModelCode(modelCode) {
+    const $body = (void 0).querySelector("body");
     let that = this;
     this.$code__top = (void 0).querySelector(".code-more__time__h1");
     this.$code_release = (void 0).querySelector(".code-more__descr__p");
@@ -4021,6 +4025,8 @@ class AnimaWebGL {
       onLeave: () => {
       },
       onUpdate: (self2) => {
+        if (!$body.classList.contains("index"))
+          return;
         that.tl_move_modelCode.progress(self2.progress.toFixed(3));
       }
     });
@@ -4028,11 +4034,14 @@ class AnimaWebGL {
   //?  -------------------------- MOUSE MOVE -------------------------- //
   //?  -------------------------- MOUSE MOVE -------------------------- //
   onMouseMove(model) {
+    const $body = (void 0).querySelector("body");
     this.mouse = { x: 0, y: 0, moved: false };
     const inital_rot = { x: model.rotation.x, y: model.rotation.y };
     let that = this;
     if ((void 0).innerWidth > 1024) {
       this.$hero__top.addEventListener("mousemove", (e) => {
+        if (!$body.classList.contains("index"))
+          return;
         that.mouse.moved = true;
         let x = e.clientX;
         let y = e.clientY;
@@ -4046,6 +4055,8 @@ class AnimaWebGL {
       }, null);
     } else {
       this.$hero__top.addEventListener("touchmove", (e) => {
+        if (!$body.classList.contains("index"))
+          return;
         that.mouse.moved = true;
         let x = e.touches[0].clientX;
         let y = e.touches[0].clientY;
@@ -4399,21 +4410,27 @@ class Home {
     return;
   }
   init(thisContent) {
+    this.$html = (void 0).querySelector("html");
     let doc = thisContent;
     this.qsa = (s, o = doc) => o.querySelectorAll(s), this.qs = (s, o = doc) => o.querySelector(s);
+    if (this.$html.classList.contains("remove-gl")) {
+      this.$html.classList.remove("remove-gl");
+    }
   }
 }
 const home = new Home();
-class About {
+class Hall {
   constructor() {
     return;
   }
   init(thisContent) {
     let doc = thisContent;
+    this.$html = (void 0).querySelector("html");
     this.qsa = (s, o = doc) => o.querySelectorAll(s), this.qs = (s, o = doc) => o.querySelector(s);
+    this.$html.classList.add("remove-gl");
   }
 }
-const about = new About();
+const hall = new Hall();
 gsap$2.registerPlugin(ScrollTrigger);
 class Transitions {
   constructor() {
@@ -4435,8 +4452,8 @@ class Transitions {
     if (pageName == "index") {
       home.init($current);
     }
-    if (pageName == "about") {
-      about.init($current);
+    if (pageName == "hall") {
+      hall.init($current);
     }
   }
   //? - =========================  on leave  ========================= -//
@@ -4445,6 +4462,7 @@ class Transitions {
     this.$old = $old;
     this.old_page_name = this.$old.dataset.page;
     gsap$2.to(this.$old, { opacity: 0, duration: 1.2, ease: "power3.inOut", onComplete: () => {
+      smooth_scroll.lenis.destroy();
       done();
     } });
   }
@@ -4461,6 +4479,7 @@ class Transitions {
     history.scrollRestoration = "manual";
     this.$current = $current;
     this.instancingPages($current, this.current_page_name);
+    smooth_scroll.setLenis(this.time);
     gsap$2.to(this.$current, { opacity: 1, duration: 1.2, ease: "power3.out", onComplete: () => {
       done();
     } });
@@ -5782,7 +5801,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   _push(`<header${ssrRenderAttrs(mergeProps({ class: "header" }, _attrs))}><div class="header__hold">`);
   _push(ssrRenderComponent(_component_nuxt_link, {
     to: "/",
-    class: "header__svg w-embed"
+    class: "header__logo header__svg w-embed"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -5823,7 +5842,27 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }, _parent));
   _push(`<div class="header__nav-cta"><ul role="list" class="header__nav"><!--[-->`);
   ssrRenderList($props.postData.header_navigation, (nav_item) => {
-    _push(`<li class="header__nav__li"><a${ssrRenderAttr("href", nav_item.url)}${ssrRenderAttr("target", nav_item.external_link ? "_blank" : null)} class="nav_item inline-block">${ssrInterpolate(nav_item.label)}</a></li>`);
+    _push(`<li class="header__nav__li">`);
+    if (nav_item.external_link) {
+      _push(`<a${ssrRenderAttr("href", nav_item.url)} target="_blank " class="nav_item inline-block">${ssrInterpolate(nav_item.label)}</a>`);
+    } else {
+      _push(ssrRenderComponent(_component_nuxt_link, {
+        href: nav_item.url,
+        class: "nav_item inline-block"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`${ssrInterpolate(nav_item.label)}`);
+          } else {
+            return [
+              createTextVNode(toDisplayString(nav_item.label), 1)
+            ];
+          }
+        }),
+        _: 2
+      }, _parent));
+    }
+    _push(`</li>`);
   });
   _push(`<!--]--></ul><button class="header__trg-menu"><div class="header__trg-menu__icon w-embed"><svg width="100%" viewBox="0 0 28 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2H27.5" stroke="var(--soft)" stroke-width="3"></path><path d="M0 7.5H27.5" stroke="var(--soft)" stroke-width="3"></path></svg></div></button><a${ssrRenderAttr("href", $props.postData.header_cta_url)} target="_blank" class="header__cta">${ssrInterpolate($props.postData.header_cta_label)}</a></div></div></header>`);
 }
@@ -5836,21 +5875,58 @@ _sfc_main$5.setup = (props, ctx) => {
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
 class MenuFS {
   constructor() {
-    this.body = (void 0).querySelector("body");
+    this.$html = (void 0).querySelector("html");
+    this.$logo = (void 0).querySelector(".header__logo");
     this.menufs = {
-      $el: (void 0).querySelector(".menu-fs")
+      $el: (void 0).querySelector(".menu-fs"),
+      $fader: (void 0).querySelector(".menu-fs__fader"),
+      $bg: (void 0).querySelector(".menu-fs__bg"),
+      $trg: (void 0).querySelector(".header__trg-menu"),
+      $content: (void 0).querySelector(".menu-fs__content"),
+      $links: (void 0).querySelectorAll(".menu-fs__nav a, .menu-fs__socials li")
     };
     this.time = 1;
     this.animating = false;
-    this.setters();
-    this.bindEvents();
   }
   setters() {
+    this.tl_menufs = gsap$2.timeline({ paused: true }).fromTo(this.menufs.$content, { xPercent: -100 }, { xPercent: 0, duration: this.time }, 0).fromTo(this.menufs.$fader, { opacity: 0 }, { opacity: 1, duration: this.time }, 0).fromTo(this.menufs.$links, { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: this.time, stagger: 0.1 }, "<50%");
+  }
+  openMenu() {
+    this.animating = true;
+    this.$html.classList.add("is-menufs");
+    this.tl_menufs.tweenTo(this.tl_menufs.duration(), { duration: this.time * 8, ease: "expo.out", onComplete: () => {
+      this.animating = false;
+    } });
+  }
+  closeMenu() {
+    this.animating = true;
+    this.$html.classList.remove("is-menufs");
+    this.tl_menufs.tweenTo(0, { duration: this.time, ease: "expo.out", onComplete: () => {
+      this.animating = false;
+    } });
   }
   bindEvents() {
+    this.menufs.$trg.addEventListener("click", () => {
+      if (this.$html.classList.contains("is-menufs")) {
+        this.closeMenu();
+      } else {
+        this.openMenu();
+      }
+    });
+    this.menufs.$links.forEach(($link) => {
+      $link.addEventListener("click", () => {
+        this.closeMenu();
+      });
+    });
+    this.$logo.addEventListener("click", () => {
+      if (this.$html.classList.contains("is-menufs")) {
+        this.closeMenu();
+      }
+    });
   }
 }
 const _sfc_main$4 = {
+  props: ["postData"],
   methods: {
     onClick(event) {
     }
@@ -5860,7 +5936,36 @@ const _sfc_main$4 = {
   }
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "menu-fs e-wvw e-hvh" }, _attrs))}><div class="menu-fs__hold e-wp e-hp e-flex"></div></div>`);
+  const _component_nuxt_link = __nuxt_component_0$1;
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "menu-fs e-wvw e-hvh" }, _attrs))}><div class="menu-fs__hold e-wp e-hp e-flex"><div class="menu-fs__fader"></div><div class="menu-fs__content"><ul class="menu-fs__nav"><!--[-->`);
+  ssrRenderList($props.postData.header_navigation, (nav_item) => {
+    _push(`<li>`);
+    if (nav_item.external_link) {
+      _push(`<a${ssrRenderAttr("href", nav_item.url)} target="_blank " class="nav_item inline-block">${ssrInterpolate(nav_item.label)}</a>`);
+    } else {
+      _push(ssrRenderComponent(_component_nuxt_link, {
+        href: nav_item.url,
+        class: "nav_item inline-block"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`${ssrInterpolate(nav_item.label)}`);
+          } else {
+            return [
+              createTextVNode(toDisplayString(nav_item.label), 1)
+            ];
+          }
+        }),
+        _: 2
+      }, _parent));
+    }
+    _push(`</li>`);
+  });
+  _push(`<!--]--></ul><ul class="menu-fs__socials"><!--[-->`);
+  ssrRenderList($props.postData.socials_group, (social) => {
+    _push(`<li><a${ssrRenderAttr("href", social.link)} target="_blank" class="social inline-block">${ssrInterpolate(social.social)}</a></li>`);
+  });
+  _push(`<!--]--></ul></div></div></div>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
@@ -6153,7 +6258,7 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__, {
       const _component_Sketch = __nuxt_component_4;
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
       _push(ssrRenderComponent(_component_MenuFixed, { postData: unref(data) }, null, _parent));
-      _push(ssrRenderComponent(_component_MenuFS, null, null, _parent));
+      _push(ssrRenderComponent(_component_MenuFS, { postData: unref(data) }, null, _parent));
       _push(ssrRenderComponent(_component_NuxtLayout, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
