@@ -5,8 +5,8 @@
             <div class="hall-fame__display">
                 <img :src="postData.img.url" loading="lazy" alt="" class="hall-fame__display__img">
                 
-                <div class="hall-fame__video">
-                    <video :src="postData.video.url" loading="lazy" autoplay muted loop playsinline class="hall-fame__video__video"></video>
+                <div class="hall-fame__video" v-if="postData.video.url">
+                    <video :src="postData.video.url" loading="lazy" muted loop playsinline class="hall-fame__video__video"></video>
                 </div>
             </div>
             <div class="hall-fame__info">

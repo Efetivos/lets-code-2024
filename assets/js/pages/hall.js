@@ -13,13 +13,26 @@ class Hall {
 
         this.$html.classList.add('remove-gl')
         this.DOM = {
-            $projects: this.qsa('.hall .showcase__each')
+            $projects: this.qsa('.hall .showcase__each'),
+            $projects_video: this.qsa('.hall .showcase__each video')
         }
 
-
+        this.applyHasVideo()
         this.shuffleCards()
     }
 
+    applyHasVideo() {
+        this.DOM.$projects_video.forEach((video) => {
+            const liWithVideo = video.closest('li')
+            liWithVideo.classList.add('has-video')
+            liWithVideo.addEventListener('mouseenter', () => {
+                video.play()
+            })
+            liWithVideo.addEventListener('mouseleave', () => {
+                video.pause()
+            })
+        })
+    }
 
     shuffleCards() {
         const shuffled = Array.from(this.DOM.$projects).sort(() => 0.5 - Math.random())

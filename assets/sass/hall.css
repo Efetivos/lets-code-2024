@@ -76,9 +76,14 @@ img.hall-fame__display__img {
 	top: 0;
 }
 
+.has-video:hover .hall-fame__video  {
+	opacity: 1;
+}
+
 .hall-fame__video {
 	position: absolute;
 	opacity: 0;
+	transition: opacity .3s ease-in-out;
 }
 
 .hall-fame__info {
