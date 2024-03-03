@@ -1,10 +1,10 @@
 const client_manifest = {
-  "_Footer.HvxxOE-G.js": {
+  "_Footer.q58Azm6_.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Footer.HvxxOE-G.js",
+    "file": "Footer.q58Azm6_.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -100,7 +100,7 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-404.4qQrQaav.js",
+    "file": "error-404.ExWCzYqW.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -119,7 +119,7 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-500.EtJaF2UR.js",
+    "file": "error-500.c187Pffc.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -162,7 +162,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.hzgmFn5Q.js",
+    "file": "entry.bCUE40q8.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -221,9 +221,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "hall.qv2TnInd.js",
+    "file": "hall.CY4uMuly.js",
     "imports": [
-      "_Footer.HvxxOE-G.js",
+      "_Footer.q58Azm6_.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -234,9 +234,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.Uz21fS1E.js",
+    "file": "index.nTRc1uKt.js",
     "imports": [
-      "_Footer.HvxxOE-G.js",
+      "_Footer.q58Azm6_.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

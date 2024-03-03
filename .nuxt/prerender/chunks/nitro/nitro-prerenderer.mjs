@@ -20,7 +20,7 @@ import { dirname, resolve } from 'file:///Users/victorcosta/Documents/DEV/lets-c
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "f136a146-e945-44df-ac12-4023c7396990"
+    "buildId": "a8f15fbe-cf8f-40df-85f7-a92e2d287b00"
   }
 };
 
