@@ -7,7 +7,7 @@
 		<div class="hero hero-hall">
 			<div class="hero__hold">
 				<div class="hero__welcome">
-					<div class="hero__welcome__text">{{ data.welcome }}</div>
+					<div class="hero__welcome__text">{{ hall.welcome }}</div>
 				</div>
 				<div class="hero__eat-fun">
 					<div class="hero__eat-fun__svg w-embed">
@@ -39,10 +39,10 @@
 				</div>
 				<div class="hero__subtitles">
 					<div class="hero__subtitles__left">
-						<div class="hero__subtitles__span">{{ data.hero_text_left }}</div>
+						<div class="hero__subtitles__span">{{ hall.hero_text_left }}</div>
 					</div>
 					<div class="hero__subtitles__right">
-						<div class="hero__subtitles__span">{{ data.hero_text_right }}</div>
+						<div class="hero__subtitles__span">{{ hall.hero_text_right }}</div>
 					</div>
 				</div>
 			</div>
@@ -53,16 +53,16 @@
 		<!--  -------------------- SHOWCASE -------------------- -->
 		<section id="projects" class="showcase">
 			<div class="showcase__hold">
-				<Marquee :text="data.showcase_marquee" theme="showcase__marquee"/>
+				<Marquee :text="hall.showcase_marquee" theme="showcase__marquee"/>
 				<div class="showcase__title">
 					<div class="showcase__descr">
-						<p class="showcase__p"> {{ data.description_showcase }}</p>
+						<p class="showcase__p"> {{ hall.description_showcase }}</p>
 					</div>
                     <a href="/" class="showcase__submit">SUBMIT</a>
 				</div>
 				<ul role="list" class="showcase__list">
-					<li v-for="project in data.projects_group" :key="project"  class="showcase__each">
-						<HallOfFameCard :postData="project"/>
+					<li v-for="(project, index) in hall.projects_group" :key="project"  class="showcase__each">
+						<HallOfFameCard :postData="project" :data-index="index"/>
 					</li>
 				</ul>
 			</div>
@@ -113,6 +113,8 @@
 	import navigations from "@/helpers/navigation.js";
 	const { client } = usePrismic()
 	const  { data } = await client.getSingle("homepage");
+
+    const { data: hall } = await client.getSingle("hall");
 
 	definePageMeta({
 		pageTransition: navigations 

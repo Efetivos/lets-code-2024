@@ -114,3 +114,10 @@ ul.hall-fame__socials {
 	border-radius: 0.3rem;
 	font-size: 1.7rem;
 }
+.hall-fame a {
+	transition: opacity .3s ease-in-out;
+	cursor: pointer;
+}
+.hall-fame a:hover {
+	opacity: 0.5;
+}

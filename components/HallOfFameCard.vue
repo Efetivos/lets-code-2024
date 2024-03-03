@@ -11,18 +11,18 @@
             </div>
             <div class="hall-fame__info">
                 <div class="hall-fame__info__ctn">
-                    <a :href="postData.url" target="_blank"  class="hall-fame__cta">
-                        <div class="hall-fame__cta__span">{{ postData.label_button }}</div>
+                    <a :href="postData.project_url" target="_blank"  class="hall-fame__cta">
+                        <div class="hall-fame__cta__span">{{ postData.title }}</div>
                     </a>
-                    <h1 class="hall-fame__info__h1">{{ postData.title }}</h1>
+                    <h1 class="hall-fame__info__h1">{{ postData.author }}</h1>
 
                 </div>
                 <ul class="hall-fame__socials">
-                    <li>
-                        <a href="">LinkedIn</a>
+                    <li v-if="postData.social_media_1">
+                        <a :href="postData.url_social_media_1" target="_blank">{{ postData.social_media_1 }}</a>
                     </li>
-                    <li>
-                        <a href="">Instagram</a>
+                    <li v-if="postData.social_media_2">
+                        <a :href="postData.url_social_media_2" target="_blank">{{ postData.social_media_2 }}</a>
                     </li>
                 </ul>
             </div>
