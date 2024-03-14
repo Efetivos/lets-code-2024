@@ -87,6 +87,7 @@
     "../**/*",
     "../node_modules/@nuxtjs/prismic/runtime",
     "../node_modules/@nuxtjs/google-fonts/runtime",
+    "../node_modules/nuxt-gtag/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
     ".."
   ],
@@ -95,6 +96,7 @@
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/prismic/runtime/server",
     "../node_modules/@nuxtjs/google-fonts/runtime/server",
+    "../node_modules/nuxt-gtag/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",
     "../.output"

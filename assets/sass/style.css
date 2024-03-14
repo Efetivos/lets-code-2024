@@ -697,6 +697,12 @@ a {
 	margin-bottom: 6.2rem;
 	display: flex;
 }
+@media only screen and (max-width: 579px) {
+	.footer__subtitle {
+		flex-direction: column-reverse;
+		gap: 2rem;
+	}
+}
 
 .footer__subt__text {
 	font-size: 3.4rem;

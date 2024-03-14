@@ -13,7 +13,7 @@ export default defineNuxtConfig ({
 			meta: [
 				{ charset: 'utf-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-				{ hid: 'description', name: 'description', content: "This course will help and give you some essential insights into how we can achieve better results and goals without sacrificing any vital area of our life. After finishing it, you'll be able to unleash your best version." },
+				{ hid: 'description', name: 'description', content: "We are a group of enthusiastic developers (HTML, CSS, and Javascript) who meet to code, learn, eat and make friends.We'll be sharing experiences, creating collaborative projects (just for fun), challenging ourselves with coding games, and most important, expanding our network in a pleasant and friendly environment." },
 				{ name: 'format-detection', content: 'telephone=no' },
 				{ name: 'theme-color', content: '#000000' },
 				{ name: 'og:image', content: '/cover.png' },
@@ -54,6 +54,10 @@ export default defineNuxtConfig ({
 					wght: [400]
 				},
 			}
-		}]
-	]
+		}],
+		['nuxt-gtag']
+	],
+	gtag: {
+		id: 'G-FJ2WFGXE30'
+	}
 })

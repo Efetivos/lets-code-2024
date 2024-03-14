@@ -6,7 +6,7 @@
 				<ul class="menu-fs__nav">
 					<li v-for="nav_item in postData.header_navigation" :key="nav_item">
 							<a :href="nav_item.url" v-if="nav_item.external_link" target="_blank " class="nav_item inline-block"> {{ nav_item.label }}</a>
-							<nuxt-link :href="nav_item.url" v-else class="nav_item inline-block"> {{ nav_item.label }}</nuxt-link>
+							<a :href="nav_item.url" v-else class="nav_item inline-block"> {{ nav_item.label }}</a>
 					</li>
 				</ul>				
 				<ul class="menu-fs__socials">

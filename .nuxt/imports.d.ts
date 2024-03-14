@@ -25,4 +25,6 @@ export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId
 export { injectHead, useHead, useSeoMeta, useHeadSafe, useServerHead, useServerSeoMeta, useServerHeadSafe } from '@unhead/vue';
 export { useAllPrismicDocumentsByEveryTag, useAllPrismicDocumentsByIDs, useAllPrismicDocumentsBySomeTags, useAllPrismicDocumentsByTag, useAllPrismicDocumentsByType, useAllPrismicDocumentsByUIDs, useFirstPrismicDocument, usePrismic, usePrismicDocumentByID, usePrismicDocumentByUID, usePrismicDocuments, usePrismicDocumentsByEveryTag, usePrismicDocumentsByIDs, usePrismicDocumentsBySomeTags, usePrismicDocumentsByTag, usePrismicDocumentsByType, usePrismicDocumentsByUIDs, usePrismicImage, usePrismicLink, usePrismicRichText, usePrismicText, useSinglePrismicDocument, getSliceComponentProps, defineSliceZoneComponents } from '@prismicio/vue';
 export { usePrismicPreview } from '../node_modules/@nuxtjs/prismic/dist/runtime/usePrismicPreview';
+export { useGtag } from '../node_modules/nuxt-gtag/dist/runtime/composables/useGtag';
+export { useTrackEvent } from '../node_modules/nuxt-gtag/dist/runtime/composables/useTrackEvent';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
