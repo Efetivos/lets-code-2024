@@ -20,7 +20,8 @@
                 </div>
                 <div class="project__info__links-ctn">
                     <a :href="postData.url" target="_blank"  class="project__cta">
-                        <div class="project__cta__span">{{ postData.label_button }}</div>
+                        <div class="project__cta__span learn">{{ postData.label_button }}</div>
+                        <div class="project__cta__span click">Click & Learn</div>
                     </a>
                 </div>
             </div>

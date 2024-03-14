@@ -256,8 +256,19 @@ a {
 }
 
 .marquee__travel {
-	align-items: center;
+	align-items: flex-start;
 	display: flex;
+	justify-content: flex-start;
+	will-change: transform;
+}
+.mq {
+	--time: 30s;
+	animation: marquee var(--time) infinite linear;
+}
+
+@keyframes marquee {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-50%); }
 }
 
 .marquee__travel__item {
@@ -446,8 +457,10 @@ a {
 
 .project__cta {
 	width: 21rem;
+	background-color: var(--line-color);
+	color: var(--color);
+	border: 1px solid transparent;
 	height: 5.5rem;
-	background-color: var(--white);
 	border-radius: 1rem;
 	padding-top: 0;
 	padding-left: 0;
@@ -456,15 +469,36 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	pointer-events: none;
+	transition: all 0.2s ease-out;
+}
+.is-info .project__cta {
+	background-color: var(--white);
+	pointer-events: auto;
+}
+.project__cta:hover {
+	background-color: var(--dark-color);
+	color: var(--white);
+	border: 1px solid var(--line-soft);
 }
 
 .project__cta__span {
-	color: var(--black);
+	color: inherit;
 	font-family: Space Grotesk, sans-serif;
 	font-weight: 400;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
 }
-
+.is-info .project__cta__span.learn {
+	opacity: 0;
+}
+.project__cta__span.click {
+	position: absolute;
+	opacity: 0;
+}
+.is-info .project__cta__span.click {
+	opacity: 1;
+}
 .project__subtitle {
 	margin-bottom: 2rem;
 	font-size: 2.2rem;
@@ -662,6 +696,18 @@ a {
 	font-family: Pathway Gothic One, sans-serif;
 	font-size: 4.4rem;
 	position: absolute;
+}
+.code-more__cta__svg svg {
+	will-change: rotate;
+}
+.is-rotate {
+	--time-rotate: 30s;
+	animation: rotate var(--time-rotate) infinite linear;
+}
+
+@keyframes rotate {
+	0% { rotate: 0deg; }
+	100% { rotate: 360deg; }
 }
 
 .code-more__lines {

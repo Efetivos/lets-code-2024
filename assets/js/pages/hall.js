@@ -1,4 +1,5 @@
 import { gsap } from 'gsap'
+import Observs from './observs';
 
 class Hall {
     constructor() {
@@ -19,6 +20,7 @@ class Hall {
 
         this.applyHasVideo()
         this.shuffleCards()
+        new Observs(thisContent)
     }
 
     applyHasVideo() {
@@ -40,8 +42,6 @@ class Hall {
             card.style.order = i
         })
     }
-
-
 
 }
 

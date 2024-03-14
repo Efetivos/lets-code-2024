@@ -126,3 +126,11 @@ ul.hall-fame__socials {
 .hall-fame a:hover {
 	opacity: 0.5;
 }
+.hero.hero-hall {
+	background: #4b151a;
+	padding-bottom: 6rem;
+}
+
+.hall section#projects {
+	margin-top: 0;
+}

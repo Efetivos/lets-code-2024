@@ -1,4 +1,5 @@
 import { gsap } from 'gsap'
+import Observs from './observs';
 class Home {
     constructor() {
         return;
@@ -14,6 +15,7 @@ class Home {
             this.$html.classList.remove('remove-gl')
         }
 
+        new  Observs(thisContent)
     }
 }
 
