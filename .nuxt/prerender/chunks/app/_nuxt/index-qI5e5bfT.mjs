@@ -58,7 +58,7 @@ const _sfc_main$1 = {
   }
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "project" }, _attrs))}><a${ssrRenderAttr("href", $props.postData.url)} target="_blank" class="project__subtitle">${ssrInterpolate($props.postData.title)}</a><div class="project__holder"><div class="project__display"><img${ssrRenderAttr("src", $props.postData.img.url)} loading="lazy" alt="" class="project__display__img"><div class="project__video"><video${ssrRenderAttr("src", $props.postData.video.url)} loading="lazy" autoplay muted loop playsinline class="project__video__video"></video></div></div><div class="project__info"><div class="project__info__ctn"><h1 class="project__info__h1">${ssrInterpolate($props.postData.title)}</h1><div class="project__info__texts"><p class="project__info__p">${ssrInterpolate($props.postData.description_1)}</p><p class="project__info__p">${ssrInterpolate($props.postData.description_2)}</p></div></div><div class="project__info__links-ctn"><a${ssrRenderAttr("href", $props.postData.url)} target="_blank" class="project__cta"><div class="project__cta__span">${ssrInterpolate($props.postData.label_button)}</div></a></div></div></div></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "project" }, _attrs))}><a${ssrRenderAttr("href", $props.postData.url)} target="_blank" class="project__subtitle">${ssrInterpolate($props.postData.title)}</a><div class="project__holder"><div class="project__display"><img${ssrRenderAttr("src", $props.postData.img.url)} loading="lazy" alt="" class="project__display__img"><div class="project__video"><video${ssrRenderAttr("src", $props.postData.video.url)} loading="lazy" autoplay muted loop playsinline class="project__video__video"></video></div></div><div class="project__info"><div class="project__info__ctn"><h1 class="project__info__h1">${ssrInterpolate($props.postData.title)}</h1><div class="project__info__texts"><p class="project__info__p">${ssrInterpolate($props.postData.description_1)}</p><p class="project__info__p">${ssrInterpolate($props.postData.description_2)}</p></div></div><div class="project__info__links-ctn"><a${ssrRenderAttr("href", $props.postData.url)} target="_blank" class="project__cta"><div class="project__cta__span learn">${ssrInterpolate($props.postData.label_button)}</div><div class="project__cta__span click">Click &amp; Learn</div></a></div></div></div></div>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -141,4 +141,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-d8-1zgkK.mjs.map
+//# sourceMappingURL=index-qI5e5bfT.mjs.map

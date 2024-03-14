@@ -20,7 +20,7 @@ import { dirname, resolve } from 'file:///Users/victorcosta/Documents/DEV/lets-c
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "a8f15fbe-cf8f-40df-85f7-a92e2d287b00"
+    "buildId": "0ead1b6b-9982-44f3-b567-01da77a57de6"
   }
 };
 
@@ -69,6 +69,15 @@ const _inlineRuntimeConfig = {
       "components": {},
       "preview": false,
       "toolbar": true
+    },
+    "gtag": {
+      "enabled": true,
+      "id": "G-FJ2WFGXE30",
+      "initCommands": [],
+      "config": {},
+      "tags": [],
+      "loadingStrategy": "defer",
+      "url": "https://www.googletagmanager.com/gtag/js"
     }
   }
 };

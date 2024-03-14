@@ -1,4 +1,4 @@
-import { version, ref, watchEffect, watch, getCurrentInstance, inject, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, hasInjectionContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, createTextVNode, toDisplayString, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
+import { version, ref, watchEffect, watch, getCurrentInstance, inject, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, useSSRContext, hasInjectionContext, resolveComponent, mergeProps, withAsyncContext, withCtx, createVNode, createApp, effectScope, reactive, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/vue/index.mjs';
 import { $fetch } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/ofetch/dist/node.mjs';
 import { createHooks } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/hookable/dist/index.mjs';
 import { getContext } from 'file:///Users/victorcosta/Documents/DEV/lets-code/lets-code-primisc-nuxt/node_modules/unctx/dist/index.mjs';
@@ -4405,6 +4405,37 @@ class Time2 extends EventEmitter2 {
     });
   }
 }
+class Observs {
+  constructor(thisContent) {
+    let doc = thisContent;
+    this.$html = (void 0).querySelector("html");
+    this.qsa = (s, o = doc) => o.querySelectorAll(s), this.qs = (s, o = doc) => o.querySelector(s);
+    this.$marquees = this.qsa(".marquee__travel");
+    const observer = new IntersectionObserver(function(entries, observer2) {
+      entries.forEach((entry2) => {
+        let $mq = entry2.target;
+        if (!entry2.isIntersecting) {
+          $mq.classList.remove("mq");
+        } else {
+          $mq.classList.add("mq");
+        }
+      });
+    });
+    this.$marquees.forEach((el) => observer.observe(el));
+    this.$cta = this.qsa(".code-more__cta__svg svg");
+    const observer_rotate = new IntersectionObserver(function(entries, observer_rotate2) {
+      entries.forEach((entry2) => {
+        let $mq = entry2.target;
+        if (!entry2.isIntersecting) {
+          $mq.classList.remove("is-rotate");
+        } else {
+          $mq.classList.add("is-rotate");
+        }
+      });
+    });
+    this.$cta.forEach((el) => observer_rotate.observe(el));
+  }
+}
 class Home {
   constructor() {
     return;
@@ -4416,6 +4447,7 @@ class Home {
     if (this.$html.classList.contains("remove-gl")) {
       this.$html.classList.remove("remove-gl");
     }
+    new Observs(thisContent);
   }
 }
 const home = new Home();
@@ -4434,6 +4466,7 @@ class Hall {
     };
     this.applyHasVideo();
     this.shuffleCards();
+    new Observs(thisContent);
   }
   applyHasVideo() {
     this.DOM.$projects_video.forEach((video) => {
@@ -4571,7 +4604,7 @@ const _routes = [
     meta: __nuxt_page_meta || {},
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./_nuxt/index-d8-1zgkK.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-qI5e5bfT.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -5831,7 +5864,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }
     _push(`</li>`);
   });
-  _push(`<!--]--></ul><button class="header__trg-menu"><div class="header__trg-menu__icon w-embed"><svg width="100%" viewBox="0 0 28 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2H27.5" stroke="var(--soft)" stroke-width="3"></path><path d="M0 7.5H27.5" stroke="var(--soft)" stroke-width="3"></path></svg></div></button><a${ssrRenderAttr("href", $props.postData.header_cta_url)} target="_blank" class="header__cta">${ssrInterpolate($props.postData.header_cta_label)}</a></div></div></header>`);
+  _push(`<!--]--><a href="https://labroom.netlify.app" target="_blank " class="nav_item inline-block">Lab Room</a></ul><button class="header__trg-menu"><div class="header__trg-menu__icon w-embed"><svg width="100%" viewBox="0 0 28 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2H27.5" stroke="var(--soft)" stroke-width="3"></path><path d="M0 7.5H27.5" stroke="var(--soft)" stroke-width="3"></path></svg></div></button><a${ssrRenderAttr("href", $props.postData.header_cta_url)} target="_blank" class="header__cta">${ssrInterpolate($props.postData.header_cta_label)}</a></div></div></header>`);
 }
 const _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
@@ -5854,6 +5887,8 @@ class MenuFS {
     };
     this.time = 1;
     this.animating = false;
+    this.setters();
+    this.bindEvents();
   }
   setters() {
     this.tl_menufs = gsap$2.timeline({ paused: true }).fromTo(this.menufs.$content, { xPercent: -100 }, { xPercent: 0, duration: this.time }, 0).fromTo(this.menufs.$fader, { opacity: 0 }, { opacity: 1, duration: this.time }, 0).fromTo(this.menufs.$links, { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: this.time, stagger: 0.1 }, "<50%");
@@ -5903,28 +5938,13 @@ const _sfc_main$4 = {
   }
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_nuxt_link = __nuxt_component_0$1;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "menu-fs e-wvw e-hvh" }, _attrs))}><div class="menu-fs__hold e-wp e-hp e-flex"><div class="menu-fs__fader"></div><div class="menu-fs__content"><ul class="menu-fs__nav"><!--[-->`);
   ssrRenderList($props.postData.header_navigation, (nav_item) => {
     _push(`<li>`);
     if (nav_item.external_link) {
       _push(`<a${ssrRenderAttr("href", nav_item.url)} target="_blank " class="nav_item inline-block">${ssrInterpolate(nav_item.label)}</a>`);
     } else {
-      _push(ssrRenderComponent(_component_nuxt_link, {
-        href: nav_item.url,
-        class: "nav_item inline-block"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`${ssrInterpolate(nav_item.label)}`);
-          } else {
-            return [
-              createTextVNode(toDisplayString(nav_item.label), 1)
-            ];
-          }
-        }),
-        _: 2
-      }, _parent));
+      _push(`<a${ssrRenderAttr("href", nav_item.url)} class="nav_item inline-block">${ssrInterpolate(nav_item.label)}</a>`);
     }
     _push(`</li>`);
   });
