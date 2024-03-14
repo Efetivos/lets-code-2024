@@ -17,8 +17,9 @@
 						<li v-for="nav_item in postData.header_navigation" :key="nav_item"  class="header__nav__li">
 							<a :href="nav_item.url" v-if="nav_item.external_link" target="_blank " class="nav_item inline-block"> {{ nav_item.label }}</a>
 							<a :href="nav_item.url" v-else class="nav_item inline-block"> {{ nav_item.label }}</a>
-
 						</li>
+
+						<a href="/labroom" class="nav_item inline-block"> Labroom</a>
 					</ul>
 					<button class="header__trg-menu">
 						<div class="header__trg-menu__icon w-embed">
